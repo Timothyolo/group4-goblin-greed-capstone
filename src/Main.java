@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import com.Rooms.BaseRoom;
+import com.Rooms.Entrance;
 import com.Players.PlayableCharacter;
 
 
@@ -7,6 +7,8 @@ public class Main {
 
     enum Commands {
         START,
+        ENTER,
+        GRAB,
         QUIT,
         HELP
     }
@@ -25,6 +27,11 @@ public class Main {
                 String playerName = scan.nextLine();
                 PlayableCharacter player = new PlayableCharacter(playerName);
                 System.out.println("Welcome to the adventure " + player.getName() + ". Before you is a cavernous hole that leads into an abyss that echoes howls and wails of heroes before you, truely an eyesore around the grassy knoll that surrounds you…..do you dare enter?");
+                String nextMove = scan.nextLine();
+                if (nextMove.equalsIgnoreCase(Commands.ENTER.name())) {
+                    Entrance entrance = new Entrance(player);
+
+                }
             }
             else if(name.equalsIgnoreCase(Commands.QUIT.name())) {
                 System.out.println("You forfeited, traitor!");
