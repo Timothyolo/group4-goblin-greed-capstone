@@ -1,7 +1,8 @@
 import java.util.Scanner;
+import com.Rooms.BaseRoom;
 
 
-public class main {
+public class Main {
 
     enum Commands {
         START,
@@ -13,6 +14,7 @@ public class main {
         Scanner scan = new Scanner(System.in);
         ASCII_Art title_Art = new ASCII_Art();
         title_Art.title_screen_image();
+
         while(true) {
             System.out.println("What do you wanna do: ");
             String name = scan.nextLine();
