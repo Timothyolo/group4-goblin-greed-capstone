@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import com.Players.Player;
 import com.Items.Item;
+import com.Art.ASCII_Art;
 
-public abstract class BaseRoom {
-    public Collection<Player> players = new ArrayList<>();
+public class Room {
     public Collection<Item> items = new ArrayList<>();
+    public ASCII_Art artwork;
+
+
 
 }
