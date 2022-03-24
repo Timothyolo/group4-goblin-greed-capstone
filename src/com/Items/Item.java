@@ -1,9 +1,11 @@
 package com.Items;
 
-public abstract class Item {
+public class Item {
     public String name;
     public int atk;
     public String desc;
+
+
 
     public String getName() {
         return name;
