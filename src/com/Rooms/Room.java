@@ -1,40 +1,36 @@
 package com.Rooms;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import com.Players.Player;
-import com.Items.Item;
-import com.Art.ASCII_Art;
-
 public class Room {
-    private Collection<Item> items = new ArrayList<>();
-    private Player player;
-    private ASCII_Art artwork;
-    private int north, south, west, east;
+  private String name;
+  private String desc;
 
-    public Player getPlayer() {
-        return player;
+  public Room(String name, String desc) {
+      setName(name);
+      setDesc(desc);
+  }
+
+    public String getName() {
+        return name;
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public ASCII_Art getArtwork() {
-        return artwork;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setArtwork(ASCII_Art artwork) {
-        this.artwork = artwork;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
 
     @Override
     public String toString() {
         return "Room{" +
-                "items=" + items +
-                ", player=" + player +
-                ", artwork=" + artwork +
+                "name='" + name + '\'' +
+                ", desc='" + desc + '\'' +
                 '}';
     }
 }
