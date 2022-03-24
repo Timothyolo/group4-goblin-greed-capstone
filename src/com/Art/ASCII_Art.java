@@ -1,28 +1,29 @@
-
+package com.Art;
 
 public class ASCII_Art {
-    public static void title_screen_image(){
-        System.out.println("");
-        System.out.println("   ▄██████▄   ▄██████▄  ▀█████████▄   ▄█        ▄█  ███▄▄▄▄      ▄████████ ");
-        System.out.println("  ███    ███ ███    ███   ███    ███ ███       ███  ███▀▀▀██▄   ███    ███ ");
-        System.out.println("  ███    █▀  ███    ███   ███    ███ ███       ███▌ ███   ███   ███    █▀  ");
-        System.out.println(" ▄███        ███    ███  ▄███▄▄▄██▀  ███       ███▌ ███   ███   ███        ");
-        System.out.println("▀▀███ ████▄  ███    ███ ▀▀███▀▀▀██▄  ███       ███▌ ███   ███ ▀███████████ ");
-        System.out.println("  ███    ███ ███    ███   ███    ██▄ ███       ███  ███   ███          ███ ");
-        System.out.println("  ███    ███ ███    ███   ███    ███ ███▌    ▄ ███  ███   ███    ▄█    ███ ");
-        System.out.println("  ████████▀   ▀██████▀  ▄█████████▀  █████▄▄██ █▀    ▀█   █▀   ▄████████▀  ");
-        System.out.println("                                     ▀                                    ");
-        System.out.println("");
-        System.out.println("   ▄██████▄     ▄████████    ▄████████    ▄████████ ████████▄  ");
-        System.out.println("  ███    ███   ███    ███   ███    ███   ███    ███ ███   ▀███ ");
-        System.out.println("  ███    █▀    ███    ███   ███    █▀    ███    █▀  ███    ███ ");
-        System.out.println(" ▄███         ▄███▄▄▄▄██▀  ▄███▄▄▄      ▄███▄▄▄     ███    ███ ");
-        System.out.println("▀▀███ ████▄  ▀▀███▀▀▀▀▀   ▀▀███▀▀▀     ▀▀███▀▀▀     ███    ███ ");
-        System.out.println("  ███    ███ ▀███████████   ███    █▄    ███    █▄  ███    ███ ");
-        System.out.println("  ███    ███   ███    ███   ███    ███   ███    ███ ███   ▄███ ");
-        System.out.println("  ████████▀    ███    ███   ██████████   ██████████ ████████▀  ");
-        System.out.println("               ███    ███                                     ");
-        System.out.println("");
+    public StringBuilder title_screen_image(){
+        StringBuilder str = new StringBuilder("\n");
+        str.append("   ▄██████▄   ▄██████▄  ▀█████████▄   ▄█        ▄█  ███▄▄▄▄      ▄████████ \n");
+        str.append("  ███    ███ ███    ███   ███    ███ ███       ███  ███▀▀▀██▄   ███    ███ \n");
+        str.append("  ███    █▀  ███    ███   ███    ███ ███       ███▌ ███   ███   ███    █▀  \n");
+        str.append(" ▄███        ███    ███  ▄███▄▄▄██▀  ███       ███▌ ███   ███   ███        \n");
+        str.append("▀▀███ ████▄  ███    ███ ▀▀███▀▀▀██▄  ███       ███▌ ███   ███ ▀███████████ \n");
+        str.append("  ███    ███ ███    ███   ███    ██▄ ███       ███  ███   ███          ███ \n");
+        str.append("  ███    ███ ███    ███   ███    ███ ███▌    ▄ ███  ███   ███    ▄█    ███ \n");
+        str.append("  ████████▀   ▀██████▀  ▄█████████▀  █████▄▄██ █▀    ▀█   █▀   ▄████████▀  \n");
+        str.append("                                     ▀                                    \n");
+        str.append("\n");
+        str.append("   ▄██████▄     ▄████████    ▄████████    ▄████████ ████████▄  \n");
+        str.append("  ███    ███   ███    ███   ███    ███   ███    ███ ███   ▀███ \n");
+        str.append("  ███    █▀    ███    ███   ███    █▀    ███    █▀  ███    ███ \n");
+        str.append(" ▄███         ▄███▄▄▄▄██▀  ▄███▄▄▄      ▄███▄▄▄     ███    ███ \n");
+        str.append("▀▀███ ████▄  ▀▀███▀▀▀▀▀   ▀▀███▀▀▀     ▀▀███▀▀▀     ███    ███ \n");
+        str.append("  ███    ███ ▀███████████   ███    █▄    ███    █▄  ███    ███ \n");
+        str.append("  ███    ███   ███    ███   ███    ███   ███    ███ ███   ▄███ \n");
+        str.append("  ████████▀    ███    ███   ██████████   ██████████ ████████▀  \n");
+        str.append("               ███    ███                                     \n");
+        str.append("\n");
+        return str;
     }
 
     public static void goblin_image(){
