@@ -20,19 +20,21 @@ public class ImportJSON {
         Object objItems = new JSONParser().parse(new FileReader("src/com/JsonObjects/items.json"));
         Collection<Object> inventory = new ArrayList<>();
         Collection<Item> items = new ArrayList<>();
-
         JSONArray jaItems = (JSONArray) objItems;
         inventory.addAll(jaItems);
 
         for (Object obItems:
                 inventory) {
             JSONObject inventoryItem = (JSONObject) obItems;
-            Item questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"));
+            Item questItem;
+            if (inventoryItem.containsKey("attack")) {
+                questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("attack"));
+            } else {
+                questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"));
+            }
             items.add(questItem);
-
         }
         return items;
-
     }
 
     public Collection<Player> getNpcs() throws IOException, ParseException {
