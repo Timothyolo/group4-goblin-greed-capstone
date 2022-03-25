@@ -1,3 +1,4 @@
+import com.Items.Item;
 import com.Players.Player;
 import com.Rooms.Room;
 import org.json.simple.JSONArray;
@@ -45,6 +46,25 @@ public class Main {
             npcs.add(npc);
         }
         System.out.println(npcs);
+
+
+
+        // parsing items
+        Collection<Object> inventory = new ArrayList<>();
+        Collection<Item> items = new ArrayList<>();
+
+        Object objItems = new JSONParser().parse(new FileReader("src/com/JsonObjects/items.json"));
+        JSONArray jaItems = (JSONArray) objItems;
+        inventory.addAll(jaItems);
+
+        for (Object obItems:
+                inventory) {
+            JSONObject inventoryItem = (JSONObject) obItems;
+            Item questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"));
+            items.add(questItem);
+
+        }
+        System.out.println(items);
 
 
 

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "sword",
+    "desc": "A long sword"
+  },
+  {
+    "name": "torch",
+    "desc": "A lit torch to help you see"
+  }
+]
