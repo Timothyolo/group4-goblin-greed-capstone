@@ -6,5 +6,17 @@
   {
     "name": "torch",
     "desc": "A lit torch to help you see"
+  },
+  {
+    "name": "shield",
+    "desc": "A large shield"
+  },
+  {
+    "name": "key",
+    "desc": "A key to a door you do not know"
+  },
+  {
+    "name": "goblet",
+    "desc": "An old goblet"
   }
 ]
