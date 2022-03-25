@@ -62,10 +62,11 @@ public class Game {
         System.out.println("What you would like to do?");
         System.out.println("Enter 'go' and the room name to go to the room ex: 'go Corridor'");
         String[] location = in.nextLine().split(" ");
+        if("quit".equalsIgnoreCase(location[0])){
+            System.out.println("Thanks for playing!");
+            System.exit(130);
+        }
         moveRoom(location[1]);
-
-
-
     }
 
     public void moveRoom(String location) {
