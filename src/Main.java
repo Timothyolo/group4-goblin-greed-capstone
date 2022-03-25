@@ -1,4 +1,5 @@
 import com.Items.Item;
+import com.Players.Player;
 import com.Rooms.Room;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,10 +17,15 @@ public class Main {
         // parsing file "JSONExample.json"
         Collection<Object> rooms = new ArrayList<>();
         Collection<Room> map = new ArrayList<>();
-
+        Collection<Object> charjson = new ArrayList<>();
+        Collection<Player> npcs = new ArrayList<>();
         Object obj = new JSONParser().parse(new FileReader("src/com/JsonObjects/rooms.json"));
+        Object charaobj = new JSONParser().parse(new FileReader("src/com/JsonObjects/characterList.json"));
 
         JSONArray ja = (JSONArray) obj;
+        JSONArray ch = (JSONArray) charaobj;
+
+        charjson.addAll(ch);
 
 
         rooms.addAll(ja);
@@ -32,6 +38,14 @@ public class Main {
 
         }
         System.out.println(map);
+
+        for (Object cha: charjson
+             ) {
+            JSONObject character = (JSONObject) cha;
+            Player npc = new Player((String) character.get("name"), (Long) character.get("hp"), (Long) character.get("attack"));
+            npcs.add(npc);
+        }
+        System.out.println(npcs);
 
 
 
