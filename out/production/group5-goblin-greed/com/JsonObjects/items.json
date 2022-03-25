@@ -1,6 +1,7 @@
 [
   {
     "name": "sword",
+    "attack":  10,
     "desc": "A long sword"
   },
   {
@@ -18,5 +19,49 @@
   {
     "name": "goblet",
     "desc": "An old goblet"
+  },
+  {
+    "name": "steel sword",
+    "desc": "A sturdy and reliable sword"
+  },
+  {
+    "name": "ruby necklace",
+    "desc": "A a beautiful necklace adorned with a gorgeous ruby."
+  },
+  {
+    "name": "steel shield",
+    "desc": "A large shield that can withstand heavy blows"
+  },
+  {
+    "name": "coin",
+    "desc": "A coin that seems to be older than the castle and from a land you don't know."
+  },
+  {
+    "name": "note",
+    "desc": "A note warning you that this castle is not what it seems."
+  },
+  {
+    "name": "map",
+    "desc": "A map of the castle"
+  },
+  {
+    "name": "wine",
+    "desc": "An ancient brand of wine that you wonder might still be good."
+  },
+  {
+    "name": "portrait",
+    "desc": "A large painting of someone of prominence"
+  },
+  {
+    "name": "tobacco",
+    "desc": "How long have people been smoking?!!?"
+  },
+  {
+    "name": "emblem",
+    "desc": "An emblem similar to your own but much older."
+  },
+  {
+    "name": "mace",
+    "desc": "A mace with a nice and sturdy handle that can do some real damage."
   }
 ]
