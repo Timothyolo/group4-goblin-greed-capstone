@@ -66,7 +66,12 @@ public class Game {
             System.out.println("Thanks for playing!");
             System.exit(130);
         }
-        moveRoom(location[1]);
+        else if("go".equalsIgnoreCase(location[0])){
+            moveRoom(location[1]);
+        }
+        else if("look".equalsIgnoreCase(location[0])){
+            lookAround();
+        }
     }
 
     public void moveRoom(String location) {
@@ -75,4 +80,17 @@ public class Game {
         player.setCurrentRoom(rooms.get(0));
 
     }
+
+    public void lookAround(){
+        Player player = getPlayer();
+        Room currentRoom = player.getCurrentRoom();
+        System.out.println("You see: \n");
+        ArrayList<Item> roomItems = (ArrayList<Item>) currentRoom.getItems();
+        for(int x=0; x< currentRoom.getItems().size(); x++){
+            System.out.println(roomItems.get(x));
+        }
+
+
+    }
+
 }
