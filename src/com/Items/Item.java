@@ -1,11 +1,13 @@
 package com.Items;
 
 public class Item {
-    public String name;
-    public int atk;
-    public String desc;
+    private String name;
+    private String desc;
 
-
+    public Item(String name, String desc) {
+        setName(name);
+        setDesc(desc);
+    }
 
     public String getName() {
         return name;
@@ -15,13 +17,6 @@ public class Item {
         this.name = name;
     }
 
-    public int getAtk() {
-        return atk;
-    }
-
-    public void setAtk(int atk) {
-        this.atk = atk;
-    }
 
     public String getDesc() {
         return desc;
@@ -31,4 +26,11 @@ public class Item {
         this.desc = desc;
     }
 
+    @Override
+    public String toString() {
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", desc='" + desc + '\'' +
+                '}';
+    }
 }
