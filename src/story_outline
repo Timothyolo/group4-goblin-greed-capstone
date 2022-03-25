@@ -1,0 +1,84 @@
+BASIC STORY OUTLINE:
+The adventure's primary objective is to get the treasure in the dungeon they've been informed about in multiple ways therefore giving multiple endings
+
+TURTORIAL:
+"As the player you are able to type in a VERB like [verb] and sometimes an OBJECT for instance [object] and to move around the rooms type NORTH, SOUTH, EAST, WEST"
+
+ROOMS
+
+Entering the dungeon:
+“Before you is a cavernous hole that leads into an abyss that echoes howls and wails of heroes before you, truly an eyesore around the grassy knoll that surrounds you…..do you dare enter?”
+
+Yes or No?
+
+Yes-Entering the first room for the first time:
+“Clacking down the stone steps, the air grows damp and thick, foul smells insult your nose while you descend down the unnerving entrance.  You can hear grumbling in the distance only getting louder, it was a tongue you were unfamiliar with.  Until you finally enter the first room of your trek.  The room was crudely designed, scrapes and peculiar signs decorate the walls of this dungeness room.  Multiple doors facing NORTH, WEST, EAST and SOUTH that would lead you to an unknown place.  More specifically a green warted person snaps his head to you, alerted by your presence as he sits by the North door atop a high stool to make up for his lack of height.”
+
+No-Never entering the dungeon:
+“Yeah you’re right, dungeons are dangerous, you'd be better off at home relaxing.”
+So, the adventurer went back to their cottage and lived a peaceful life as an author selling their new book, “How to stay alive, an ex-adventurer’s tale”.........it did not sell well.
+Player opens the treasure door:
+
+“The door swings open after a rough push, the scent of metals washing over you as your eyes finally come into contact with the piles of gold, gems and jewelry.  A decent pile that could even make a dragon jealous of this keep.  Large vases and crowns reflecting your image back to you, the sight was quite breathtaking.  Do you take the treasure?”
+
+Yes or No?
+
+Player enters CLUE ROOM:
+“You enter the room, the door creaks open.  At first it seems empty, but a piece of paper catches your eye with some scribblings.  There’s a door to the EAST and the SOUTH.”
+
+Player enters KEY ROOM
+“You enter the room, there only seems to be two doors, NORTH and EAST….”
+IF player uses SPYGLASS in KEY ROOM
+“Upon closer inspection using the SPYGLASS you can see a small golden key in the corner of the room.  Grab it?”
+
+Yes or No?
+
+
+Player enters the WEAPON ROOM
+“You enter the next room, this one seems to be grimy, bottles and bags litter the room, but one thing sticks out ot you.  A mace, looked likes it was slightly used, still in good enough condition to use.  There are doors to the WEST, NORTH, and EAST.”
+
+Player enters the FOOD ROOM
+“As soon as you enter this room, you can smell some freshly baked bread with a side of butter.  You don’t know who made it or why it was here, but the aroma was blissful.  There are doors to your WEST and NORTH.
+
+Player enters the TRAP/SPYGLASSROOM/without reading sign
+“Taking a single step into this room you feel a mechanism activate and before you have time to react spears jut from every side of the room…..needless to say you were turned into swiss cheese and have met a grim end….”
+GAME END
+
+Player enters the TRAP/SPYGLASSROOM/with sign knowledge
+“With your premeditated information, you open the door and then see the pressure plate.  By tossing a loose rock onto the plate causing the spear trap to activate and miss you completely!
+After the chaos and a look around the room, besides some of the shattered spears you see a strange monocular device.  There are doors to your WEST and SOUTH.”
+
+Player looks at sign GOBLIN ROOM:
+North:
+“There’s a sign above the door: TReASuREE…..it was spelled incorrectly and was poorly replaced with said sign.”
+East:
+“The door east says: WARNING SPIKE TRAP AHEAD please be careful”
+West:
+“The west sign says: Storage Room”
+South:
+“Hmmm there doesn’t seem to be a sign in there.”
+
+
+NPC DIALOGUE
+
+Goblin’s first dialogue:
+“Oi….what’re you doin ‘ere mate?  This ain’t the place for people who value their life.”  He grunts speaking in english rather than the language you heard before.
+
+Talking to the Goblin:
+“Huh?  What do you want?  I got nothin for ya…..now scram!”  His voice echoed in the room.
+
+Attacking the Goblin Unarmed:
+
+Attacking the Goblin with a weapon:
+
+Giving the Goblin the bread:
+
+
+
+ITEM DIALOGUE
+
+Player looks at PAPER:
+“The key is hidden by vision of the third eye, find the spyglass located in the EAST door in the GOBLIN room….”
+
+Player enters KEY ROOM without SPYGLASS:
+“You enter the room, it seems empty, as if no one has been in here for years.....”
