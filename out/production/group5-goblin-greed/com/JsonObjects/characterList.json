@@ -1,0 +1,27 @@
+[
+	 {
+	 "name": "Goblin",
+	 "hp": 30,
+	 "attack": 5
+	 },
+	 {
+	 "name": "Ghost",
+	 "hp": 20,
+	 "attack": 7
+	 },
+	 {
+	 "name": "Orc",
+	 "hp": 45,
+	 "attack": 8
+	 },
+	 {
+	 "name": "Slime",
+	 "hp": 15,
+	 "attack": 3
+	 },
+	 {
+	 "name": "Imp",
+	 "hp": 18,
+	 "attack": 4
+	 }
+]
