@@ -8,6 +8,7 @@ import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -71,6 +72,16 @@ public class Game {
         else if("look".equalsIgnoreCase(location[0])){
             lookAround();
         }
+        else if("get".equalsIgnoreCase(location[0])) {
+            getItem(location[1],player1.getCurrentRoom().getItems(),player1.getItems());
+        }
+        else if("check".equalsIgnoreCase(location[0]) && "inventory".equalsIgnoreCase(location[1])) {
+            for (Item item: player.getItems()
+                 ) {
+                System.out.println(item);
+
+            }
+        }
     }
 
     public void moveRoom(String location) {
@@ -86,9 +97,18 @@ public class Game {
         System.out.println("You see: \n");
         ArrayList<Item> roomItems = (ArrayList<Item>) currentRoom.getItems();
         for(int x=0; x< currentRoom.getItems().size(); x++){
-            System.out.println(roomItems.get(x));
+            Item s = roomItems.get(x);
+            System.out.println(s.getName());
         }
 
+    }
+
+    public void getItem(String item, Collection<Item> roomItems, Collection<Item> playerItems) {
+        List<Item> itemToGrab = roomItems.stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
+        Item taken = itemToGrab.get(0);
+        roomItems.remove(taken);
+        playerItems.add(taken);
+        System.out.println("You picked up the " + taken.getName() + "!");
 
     }
 

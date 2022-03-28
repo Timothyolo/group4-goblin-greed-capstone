@@ -53,7 +53,13 @@ public class Player {
         items.remove(item);
     }
 
+    public Collection<Item> getItems() {
+        return items;
+    }
 
+    public void setItems(Collection<Item> items) {
+        this.items = items;
+    }
 
     public String getName() {
         return name;
