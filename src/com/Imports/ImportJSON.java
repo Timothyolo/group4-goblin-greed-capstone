@@ -27,11 +27,7 @@ public class ImportJSON {
                 inventory) {
             JSONObject inventoryItem = (JSONObject) obItems;
             Item questItem;
-            if (inventoryItem.containsKey("attack")) {
-                questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("attack"));
-            } else {
-                questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"));
-            }
+            questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"));
             items.add(questItem);
         }
         return items;
