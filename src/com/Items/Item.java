@@ -3,20 +3,13 @@ package com.Items;
 public class Item {
     private String name;
     private String desc;
-    private long attack;
+    private long value;
 
-
-    public Item(String name, String desc, long attack) {
+    public Item(String name, String desc, long value) {
         setName(name);
         setDesc(desc);
-        setAttack(attack);
+        setValue(value);
     }
-
-    public Item(String name, String desc) {
-        setName(name);
-        setDesc(desc);
-    }
-
 
 
     public String getName() {
@@ -36,12 +29,13 @@ public class Item {
         this.desc = desc;
     }
 
-    public long getAttack() {
-        return attack;
+
+    public long getValue() {
+        return value;
     }
 
-    public void setAttack(long attack) {
-        this.attack = attack;
+    public void setValue(long value) {
+        this.value = value;
     }
 
     @Override

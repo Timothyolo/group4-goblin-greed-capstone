@@ -30,7 +30,7 @@ public class ImportJSON {
             if (inventoryItem.containsKey("attack")) {
                 questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("attack"));
             } else {
-                questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"));
+                questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"));
             }
             items.add(questItem);
         }

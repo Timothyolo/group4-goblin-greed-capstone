@@ -1,0 +1,132 @@
+{
+    "name": "mace",
+    "desc": "Blunt and ready for a holy crusade",
+    "attack": 3
+	"value": 1
+  },
+  {
+    "name": "flail",
+    "desc": "A metal ball on a chain, careful not to hit yourself",
+    "attack": 3
+	"value": 1
+  },
+  {
+    "name": "war hammer",
+    "desc": "Looks like you could cause eom dents with this",
+    "attack": 5
+	"value": 1
+  },
+  {
+    "name": "Great sword",
+    "desc": "It's quite heavy but it carries it's weight with every swing",
+    "attack": 12
+	"value": 1
+  },
+  {
+    "name": "scimitar",
+    "desc": "A curved exotic sword",
+    "attack": 4
+	"value": 1
+  },
+  {
+    "name": "dagger",
+    "desc": "Small, but can still do some damage",
+    "attack": 2
+	"value": 1
+  },
+  {
+    "name": "quarterstaff",
+    "desc": "this could give you quite a range advantage",
+    "attack": 2
+	"value": 1
+  },
+  {
+    "name": "axe",
+    "desc": "once used for lumber work, now used for self defence",
+    "attack": 5
+	"value": 1
+  },
+  {
+    "name": "rapier",
+    "desc": "thin and agile",
+    "attack": 4
+	"value": 1
+  },
+  {
+    "name": "Magic sword",
+    "desc": "A short sword imbued with magical energy",
+    "attack": 17
+	"value": 1
+  },
+  {
+    "name": "The hammer of kings",
+    "desc": "A hammer said to turn smash anything to dust",
+    "attack": 24
+	"value": 1
+  },
+  {
+    "name": "Dark knife of the kings assassin",
+    "desc": "Said to have been used to smite down the old kings foes in secrecy",
+    "attack": 20
+	"value": 1
+  },
+  {
+    "name": "Spiked knuckles",
+    "desc": "Sometimes, your fists are the best answer",
+    "attack": 4
+	"value": 1
+  },
+  {
+    "name": "Greatest sword",
+    "desc": "A great sword, but bigger",
+    "attack": 12
+	"value": 1
+  },
+  {
+    "name": "Spear",
+    "desc": "A long pole with a sharpened tip",
+    "attack": 3
+	"value": 1
+  },
+  {
+    "name": "Halberd",
+    "desc": "A thick blade lays at the end of this metal rod",
+    "attack": 4
+	"value": 1
+  },
+  {
+    "name": "Twin blade",
+    "desc": "A polearm with blades at both ends",
+    "attack": 5
+	"value": 1
+  },
+  {
+    "name": "katana",
+    "desc": "A strange sword only seen in the far West",
+    "attack": 6
+	"value": 1
+  },
+  {
+    "name": "Scythe",
+    "desc": "Even farming tools can become weapons",
+    "attack": 3
+	"value": 1
+  },
+  {
+    "name": "Club",
+    "desc": "A heavy ended wooden stick that could be used from blunt needs",
+    "attack": 2
+	"value": 1
+  },
+  {
+    "name": "whip",
+    "desc": "Die monster! You don't belo- wait wrong game",
+    "attack": 3
+	"value": 1
+  },
+  {
+    "name": "the holy hand grenade",
+    "desc": "Used to vanquish rabbits",
+    "attack": 100
+	"value": 1
+  }

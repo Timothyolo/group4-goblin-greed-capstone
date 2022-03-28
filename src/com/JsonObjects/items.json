@@ -1,67 +1,97 @@
-[
-  {
-    "name": "sword",
-    "attack":  10,
-    "desc": "A long sword"
-  },
-  {
-    "name": "torch",
-    "desc": "A lit torch to help you see"
-  },
-  {
-    "name": "shield",
-    "desc": "A large shield"
-  },
-  {
-    "name": "key",
-    "desc": "A key to a door you do not know"
-  },
-  {
-    "name": "goblet",
-    "desc": "An old goblet"
-  },
-  {
-    "name": "steel sword",
-    "desc": "A sturdy and reliable sword"
-  },
-  {
-    "name": "ruby necklace",
-    "desc": "A a beautiful necklace adorned with a gorgeous ruby."
-  },
-  {
-    "name": "steel shield",
-    "desc": "A large shield that can withstand heavy blows"
-  },
-  {
-    "name": "coin",
-    "desc": "A coin that seems to be older than the castle and from a land you don't know."
-  },
-  {
-    "name": "note",
-    "desc": "A note warning you that this castle is not what it seems."
-  },
-  {
-    "name": "map",
-    "desc": "A map of the castle"
-  },
-  {
-    "name": "wine",
-    "desc": "An ancient brand of wine that you wonder might still be good."
-  },
-  {
-    "name": "portrait",
-    "desc": "A large painting of someone of prominence"
-  },
-  {
-    "name": "tobacco",
-    "desc": "How long have people been smoking?!!?"
-  },
-  {
-    "name": "emblem",
-    "desc": "An emblem similar to your own but much older."
-  },
-  {
-    "name": "mace",
-    "desc": "A mace with a nice and sturdy handle that can do some real damage."
-  }
+[{
+		"name": "pile of gold",
+		"desc": "Some loose coins hanging around",
+		"value": 4
+	},
+	{
+		"name": "ruby",
+		"desc": "glints red with crimson glow",
+		"value": 6
+	},
+	{
+		"name": "topaz",
+		"desc": "a lower quality gem but still worth something",
+		"value": 4
+	},
+	{
+		"name": "emerald",
+		"desc": "a gem with a captivating green aura",
+		"value": 5
+	},
+	{
+		"name": "diamond",
+		"desc": "a gem appraised higher than most",
+		"value": 8
+	},
+	{
+		"name": "sapphire",
+		"desc": "Blue as the deep ocean",
+		"value": 5
+	},
+	{
+		"name": "opal",
+		"desc": "a multicolored cut gem, might get you a few coins",
+		"value": 3
+	},
+	{
+		"name": "jet",
+		"desc": "this gem mirrors the pitch black of the corners of this room",
+		"value": 3
+	},
+	{
+		"name": "loose brick",
+		"desc": "Seems like this place isn't well kept",
+		"value": 1
+	},
+	{
+		"name": "health potion",
+		"desc": "a potion used by most adventurers when a cleric isn't around",
+		"value": 2
+	},
+	{
+		"name": "bread",
+		"desc": "A loaf of bread, looks a bit stale",
+		"value": 1
+	},
+	{
+		"name": "goblet",
+		"desc": "An old goblet",
+		"value": 1
+	},
+	{
+		"name": "coin",
+		"desc": "A coin that seems to be older than the castle and from a land you don't know.",
+		"value": 1
+	},
+	{
+		"name": "note",
+		"desc": "A note warning you that this castle is not what it seems.",
+		"value": 1
+	},
+	{
+		"name": "map",
+		"desc": "A map of the castle",
+		"value": 1
+	},
+	{
+		"name": "wine",
+		"desc": "An ancient brand of wine that you wonder might still be good.",
+		"value": 1
+	},
+	{
+		"name": "portrait",
+		"desc": "A large painting of someone of prominence",
+		"value": 1
+	},
+	{
+		"name": "tobacco",
+		"desc": "How long have people been smoking?!!?",
+		"value": 1
+	},
+	{
+		"name": "emblem",
+		"desc": "An emblem similar to your own but much older.",
+		"value": 1
+	}
+
 ]
