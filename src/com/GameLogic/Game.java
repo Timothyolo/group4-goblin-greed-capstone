@@ -60,7 +60,7 @@ public class Game {
         System.out.println(player1.getCurrentRoom().getDesc());
         Scanner in = new Scanner(System.in);
         System.out.println("What you would like to do?");
-        System.out.println("Enter 'go' and the room name to go to the room ex: 'go Corridor'");
+        System.out.println("Tutorial: You can 'go' to the rooms in the game and when in a room you can 'look around' to see the items in the room and then you may 'get' that specific item.\nAs the player you can also 'check inventory' to see what you have.");
         String[] location = in.nextLine().split(" ");
         if("quit".equalsIgnoreCase(location[0])){
             System.out.println("Thanks for playing!");
@@ -69,8 +69,11 @@ public class Game {
         else if("go".equalsIgnoreCase(location[0])){
             moveRoom(location[1]);
         }
-        else if("look".equalsIgnoreCase(location[0])){
+        else if("look".equalsIgnoreCase(location[0]) && "around".equalsIgnoreCase(location[1]) || "room".equalsIgnoreCase(location[1])){
             lookAround();
+        }
+        else if("look".equalsIgnoreCase(location[0])){
+            lookItem(location[1],player1.getCurrentRoom().getItems());
         }
         else if("get".equalsIgnoreCase(location[0])) {
             getItem(location[1],player1.getCurrentRoom().getItems(),player1.getItems());
@@ -102,6 +105,16 @@ public class Game {
         }
 
     }
+
+    public void lookItem(String item, Collection<Item> roomItems){
+        List<Item> itemToLookAt = roomItems.stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
+        Item lookedAt = itemToLookAt.get(0);
+        System.out.println("This is a " + lookedAt.getName()+"." + lookedAt.getDesc());
+
+    }
+
+
+
 
     public void getItem(String item, Collection<Item> roomItems, Collection<Item> playerItems) {
         List<Item> itemToGrab = roomItems.stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
