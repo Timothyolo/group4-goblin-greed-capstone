@@ -1,9 +1,15 @@
 package com.Items;
 
 public class Item {
-    public String name;
-    public int atk;
-    public String desc;
+    private String name;
+    private String desc;
+    private long value;
+
+    public Item(String name, String desc, long value) {
+        setName(name);
+        setDesc(desc);
+        setValue(value);
+    }
 
 
 
@@ -15,13 +21,6 @@ public class Item {
         this.name = name;
     }
 
-    public int getAtk() {
-        return atk;
-    }
-
-    public void setAtk(int atk) {
-        this.atk = atk;
-    }
 
     public String getDesc() {
         return desc;
@@ -31,4 +30,19 @@ public class Item {
         this.desc = desc;
     }
 
+    public long getValue() {
+        return value;
+    }
+
+    public void setValue(long value) {
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", desc='" + desc + '\'' +
+                '}';
+    }
 }

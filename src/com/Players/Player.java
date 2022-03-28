@@ -45,6 +45,14 @@ public class Player {
         this.currentRoom = currentRoom;
     }
 
+    public void addItem(Item item) {
+        items.add(item);
+    }
+
+    public void removeItem(Item item) {
+        items.remove(item);
+    }
+
 
 
     public String getName() {
