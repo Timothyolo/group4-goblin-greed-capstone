@@ -12,7 +12,6 @@ public class Item {
     }
 
 
-
     public String getName() {
         return name;
     }
@@ -29,6 +28,7 @@ public class Item {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
 
     public long getValue() {
         return value;
