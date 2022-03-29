@@ -67,12 +67,18 @@ public class Game {
         System.out.println(player1.getCurrentRoom().getDesc());
         Scanner in = new Scanner(System.in);
         System.out.println("What you would like to do?");
-        System.out.println("Tutorial: You can 'go' to the rooms in the game and when in a room you can 'look around' to see the items in the room and then you may 'get' that specific item.\nAs the player you can also 'check inventory' to see what you have.");
+        System.out.println("Type 'help' for more infomration");
         String[] location = in.nextLine().split(" ");
         try {
             if ("quit".equalsIgnoreCase(location[0])) {
                 System.out.println("Thanks for playing!");
                 System.exit(130);
+            } else if ("help".equalsIgnoreCase(location[0])){
+                System.out.println("Tutorial: Type 'GO [room name]' to go to the rooms in the game. Type 'LOOK MAP' to look at your \n" +
+                        "map and get a list of available rooms. When in a room you can type 'LOOK AROUND' to \n" +
+                        "see the items in the room and then you may type 'GET [item name]' to add that item to your inventory. As the player \n" +
+                        "you can also type 'CHECK INVENTORY' to see what you have.");
+
             } else if (location.length != 2) {
                 System.out.println("If you are not 'quit'ing the game, you need 2 inputs of a verb and noun\n like 'look' or 'get', then the noun you want to interact with.\n");
             } else if ("go".equalsIgnoreCase(location[0])) {
