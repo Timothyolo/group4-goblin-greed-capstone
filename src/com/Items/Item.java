@@ -43,6 +43,7 @@ public class Item {
         return "Item{" +
                 "name='" + name + '\'' +
                 ", desc='" + desc + '\'' +
+                ", value=" + value +
                 '}';
     }
 }

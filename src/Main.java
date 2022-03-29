@@ -9,17 +9,16 @@ public class Main {
         Game newGame = new Game();
 
         boolean startGame = newGame.beginGame();
-        while(true) {
+        while (true) {
 
-            if(startGame){
+            if (startGame) {
                 newGame.playGame(newGame.getPlayer());
-            }
-            else{
+            } else {
                 break;
             }
 
         }
-
+    }
 
 
 
@@ -29,4 +28,4 @@ public class Main {
 
 
     }
-}
+
