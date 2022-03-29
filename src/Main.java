@@ -1,12 +1,31 @@
-import com.Art.ASCII_Art;
-
+import org.json.simple.parser.ParseException;
+import java.io.IOException;
+import com.GameLogic.Game;
+import com.Imports.ImportJSON;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ParseException {
+        Game newGame = new Game();
 
-        ASCII_Art title_Art = new ASCII_Art();
-        System.out.println(title_Art.title_screen_image());
+        boolean startGame = newGame.beginGame();
+        while (true) {
+
+            if (startGame) {
+                newGame.playGame(newGame.getPlayer());
+            } else {
+                break;
+            }
+
+        }
+    }
+
+
+
+
+
+
+
 
     }
-}
+

@@ -1,40 +1,72 @@
 package com.Rooms;
 
+import com.Items.Item;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import com.Players.Player;
-import com.Items.Item;
-import com.Art.ASCII_Art;
+
+import com.Imports.ImportJSON;
+import org.json.simple.parser.ParseException;
 
 public class Room {
-    private Collection<Item> items = new ArrayList<>();
-    private Player player;
-    private ASCII_Art artwork;
-    private int north, south, west, east;
+  private String name;
+  private String desc;
+  private Collection<Item> items = new ArrayList<>();
 
-    public Player getPlayer() {
-        return player;
+  ImportJSON assets = new ImportJSON();
+  ArrayList<Item> roomItems = (ArrayList<Item>) assets.getItems();
+
+  public int getRandomNumber(int min, int max) {
+      return (int) ((Math.random() * (max - min)) + min);
+  }
+
+  public Room(String name, String desc) throws IOException, ParseException {
+      setName(name);
+      setDesc(desc);
+      generateItems();
+  }
+
+  public void generateItems(){
+      for (int i=0; i<4; i++) {
+          addItem(roomItems.get(getRandomNumber(0,roomItems.size())));
+      }
+
+  }
+
+    public String getName() {
+        return name;
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public ASCII_Art getArtwork() {
-        return artwork;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setArtwork(ASCII_Art artwork) {
-        this.artwork = artwork;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
+    public void addItem(Item item) {
+        items.add(item);
+    }
+
+    public void removeItem(Item item) {
+        items.remove(item);
+    }
+
+    public Collection<Item> getItems() {
+        return items;
+    }
 
     @Override
     public String toString() {
         return "Room{" +
-                "items=" + items +
-                ", player=" + player +
-                ", artwork=" + artwork +
+                "name='" + name + '\'' +
+                ", desc='" + desc + '\'' +
                 '}';
     }
 }

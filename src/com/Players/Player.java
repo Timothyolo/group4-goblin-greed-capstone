@@ -7,12 +7,35 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 
-public abstract class Player {
-    public int hp;
-    public int attack;
-    public Collection<Item> items = new ArrayList<>();
-    public Room currentRoom;
-    public String name;
+public class Player {
+    private String name;
+    private long hp;
+    private long attack;
+    private Collection<Item> items = new ArrayList<>();
+    private Room currentRoom;
+
+
+    public Player(String name, long hp, long attack) {
+        setName(name);
+        setHp(hp);
+        setAttack(attack);
+    }
+
+    public long getHp() {
+        return hp;
+    }
+
+    public void setHp(long hp) {
+        this.hp = hp;
+    }
+
+    public long getAttack() {
+        return attack;
+    }
+
+    public void setAttack(long attack) {
+        this.attack = attack;
+    }
 
     public Room getCurrentRoom() {
         return currentRoom;
@@ -22,7 +45,21 @@ public abstract class Player {
         this.currentRoom = currentRoom;
     }
 
+    public void addItem(Item item) {
+        items.add(item);
+    }
 
+    public void removeItem(Item item) {
+        items.remove(item);
+    }
+
+    public Collection<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(Collection<Item> items) {
+        this.items = items;
+    }
 
     public String getName() {
         return name;
@@ -33,6 +70,12 @@ public abstract class Player {
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                ", hp=" + hp +
+                ", attack=" + attack +
+                '}';
+    }
 }

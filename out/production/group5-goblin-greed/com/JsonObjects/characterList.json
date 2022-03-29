@@ -1,0 +1,112 @@
+[
+	 {
+	 "name": "Goblin",
+	 "hp": 30,
+	 "attack": 5
+	 },
+	 {
+	 "name": "Ghost",
+	 "hp": 20,
+	 "attack": 7
+	 },
+	 {
+	 "name": "Orc",
+	 "hp": 45,
+	 "attack": 8
+	 },
+	 {
+	 "name": "Slime",
+	 "hp": 15,
+	 "attack": 3
+	 },
+	 {
+	 "name": "Imp",
+	 "hp": 18,
+	 "attack": 4
+	 },
+	 {
+		"name": "Rat",
+		"hp": 7,
+		"attack": 2
+	 },
+	 {
+		"name": "Gnome",
+		"hp": 11,
+		"attack": 2
+	 },
+	 {
+		"name": "Kobold",
+		"hp": 14,
+		"attack": 3
+	 },
+	 {
+	 	"name": "Zombie",
+	 	"hp": 40,
+	 	"attack": 3
+	 },
+	 {
+	 	"name": "Ratkin",
+	 	"hp": 25,
+	 	"attack": 4
+	 },
+	 {
+	 	"name": "Aberration",
+	 	"hp": 24,
+	 	"attack": 2
+	 },
+	 {
+	 	"name": "Starved wolf",
+	 	"hp": 20,
+	 	"attack": 4
+	 },
+	 {
+	 	"name": "Skeleton",
+	 	"hp": 26,
+	 	"attack": 3
+	 },
+	 {
+	 	"name": "Bandit",
+	 	"hp": 45,
+	 	"attack": 5
+	 },
+	 {
+	 	"name": "Troglodyte",
+	 	"hp": 21,
+	 	"attack": 3
+	 },
+	 {
+	 	"name": "Fire elemental",
+	 	"hp": 24,
+	 	"attack": 6
+	 },
+	 {
+	 	"name": "Earth elemental",
+	 	"hp": 52,
+	 	"attack": 3
+	 },
+	 {
+	 	"name": "Water elemental",
+	 	"hp": 33,
+	 	"attack": 4
+	 },
+	 {
+	 	"name": "Sword master",
+	 	"hp": 44,
+	 	"attack": 7
+	 },
+	 {
+	 	"name": "Gremlin",
+	 	"hp": 13,
+	 	"attack": 2
+	 },
+	 {
+	 	"name": "Giant Spider",
+	 	"hp": 22,
+	 	"attack": 3
+	 },
+	 {
+	 	"name": "Mimic",
+	 	"hp": 43,
+	 	"attack": 5
+	 }
+]

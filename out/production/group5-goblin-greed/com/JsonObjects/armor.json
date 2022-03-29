@@ -1,0 +1,42 @@
+{
+    "name": "iron armor",
+    "desc": "some basic clad armor",
+    "defense": 50
+	"value": 1
+  },
+  {
+    "name": "chain mail",
+    "desc": "linked together to create a tight vest",
+    "defense": 40
+	"value": 1
+  },
+  {
+    "name": "ebony plate",
+    "desc": "Rare armor as dark as night",
+    "defense": 80
+	"value": 1
+  },
+  {
+    "name": "shield",
+    "desc": "A regular shield strapped together by steel and wood",
+    "defense": 40
+	"value": 1
+  },
+  {
+    "name": "tower shield",
+    "desc": "tall and heavy but provides a lot of protection",
+    "defense": 55
+	"value": 1
+  },
+  {
+    "name": "magic buckler",
+    "desc": "Light weight but provides a respectable amount of defense",
+    "defense": 60
+	"value": 1
+  },
+  {
+    "name": "leather armor",
+    "desc": "Straps of tanned leather, better than nothing",
+    "defense": 30
+	"value": 1
+  }
