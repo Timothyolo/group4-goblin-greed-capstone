@@ -1,5 +1,5 @@
 [{
-		"name": "pile of gold",
+		"name": "pile-of-gold",
 		"desc": "Some loose coins hanging around",
 		"value": 4
 	},
@@ -39,12 +39,12 @@
 		"value": 3
 	},
 	{
-		"name": "loose brick",
+		"name": "loose-brick",
 		"desc": "Seems like this place isn't well kept",
 		"value": 1
 	},
 	{
-		"name": "health potion",
+		"name": "health-potion",
 		"desc": "a potion used by most adventurers when a cleric isn't around",
 		"value": 2
 	},

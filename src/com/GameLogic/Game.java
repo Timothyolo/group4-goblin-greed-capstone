@@ -88,6 +88,7 @@ public class Game {
 
             }
         }
+
         else{
             System.out.println("Invalid input, your action are 'go' to a location and 'look' to see what is around");
             playGame(player1);
