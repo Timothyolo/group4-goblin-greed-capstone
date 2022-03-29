@@ -79,8 +79,11 @@ public class Game {
                 moveRoom(location[1]);
             } else if ("look".equalsIgnoreCase(location[0]) && "around".equalsIgnoreCase(location[1]) || "room".equalsIgnoreCase(location[1])) {
                 lookAround();
-            } else if ("look".equalsIgnoreCase(location[0])) {
-                lookItem(location[1], player1.getCurrentRoom().getItems());
+            }
+            else if("look".equalsIgnoreCase(location[0]) && "map".equalsIgnoreCase(location[1])){
+                lookAtMap();
+            }else if ("look".equalsIgnoreCase(location[0])) {
+                lookItem(location[1], player1.getCurrentRoom().getItems(),player1.getItems());
             } else if ("get".equalsIgnoreCase(location[0])) {
                 getItem(location[1], player1.getCurrentRoom().getItems(), player1.getItems());
             } else if ("check".equalsIgnoreCase(location[0]) && "inventory".equalsIgnoreCase(location[1])) {
@@ -117,7 +120,12 @@ public class Game {
 
     }
 
-    public void lookItem(String item, Collection<Item> roomItems){
+    public void lookItem(String item, Collection<Item> roomItems, Collection<Item> playerItems){
+        List<Item> itemsInInventory = playerItems.stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
+        if(itemsInInventory.size() > 0) {
+            Item lookedAt = itemsInInventory.get(0);
+            System.out.println("This is a " + lookedAt.getName()+"." + lookedAt.getDesc());
+        }
         List<Item> itemToLookAt = roomItems.stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
         Item lookedAt = itemToLookAt.get(0);
         System.out.println("This is a " + lookedAt.getName()+"." + lookedAt.getDesc());
@@ -145,12 +153,18 @@ public class Game {
                 System.out.println("You have no items in your inventory");
                 return true;
             } else {
-                System.out.println(item);
+                System.out.println(item.getName());
             }
 
         }
         return true;
 
+    }
+
+    public void lookAtMap() {
+        for (Room room: map){
+            System.out.println(room.getName());
+        }
     }
 
 }
