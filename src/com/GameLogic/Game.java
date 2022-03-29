@@ -7,10 +7,7 @@ import com.Rooms.Room;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Game {
@@ -20,6 +17,15 @@ public class Game {
     ArrayList<Player> npcs = (ArrayList<Player>) assets.getNpcs();
     ArrayList<Item> items = (ArrayList<Item>) assets.getItems();
     ASCII_Art artWork = new ASCII_Art();
+    private Collection<Item> currentItems = new ArrayList<>();
+
+    public Collection<Item> getCurrentItems() {
+        return currentItems;
+    }
+
+    public void setCurrentItems(Collection<Item> currentItems) {
+        this.currentItems = currentItems;
+    }
 
     public Game() throws IOException, ParseException {
     }
@@ -56,48 +62,45 @@ public class Game {
     }
 
     public void playGame(Player player1) throws IOException, ParseException {
+        player1.setItems(player1.getItems());
         System.out.println(player1.getName() + " is at the " + player1.getCurrentRoom().getName());
         System.out.println(player1.getCurrentRoom().getDesc());
         Scanner in = new Scanner(System.in);
         System.out.println("What you would like to do?");
         System.out.println("Tutorial: You can 'go' to the rooms in the game and when in a room you can 'look around' to see the items in the room and then you may 'get' that specific item.\nAs the player you can also 'check inventory' to see what you have.");
         String[] location = in.nextLine().split(" ");
-        if("quit".equalsIgnoreCase(location[0])){
-            System.out.println("Thanks for playing!");
-            System.exit(130);
-        }
-        else if(location.length != 2){
-            System.out.println("If you are not 'quit'ing the game, you need 2 inputs of a verb and noun\n like 'look' or 'get', then the noun you want to interact with.\n");
-        }
-        else if("go".equalsIgnoreCase(location[0])){
-            moveRoom(location[1]);
-        }
-        else if("look".equalsIgnoreCase(location[0]) && "around".equalsIgnoreCase(location[1]) || "room".equalsIgnoreCase(location[1])){
-            lookAround();
-        }
-        else if("look".equalsIgnoreCase(location[0])){
-            lookItem(location[1],player1.getCurrentRoom().getItems());
-        }
-        else if("get".equalsIgnoreCase(location[0])) {
-            getItem(location[1],player1.getCurrentRoom().getItems(),player1.getItems());
-        }
-        else if("check".equalsIgnoreCase(location[0]) && "inventory".equalsIgnoreCase(location[1])) {
-            for (Item item: player.getItems()
-                 ) {
-                System.out.println(item);
-
+        try {
+            if ("quit".equalsIgnoreCase(location[0])) {
+                System.out.println("Thanks for playing!");
+                System.exit(130);
+            } else if (location.length != 2) {
+                System.out.println("If you are not 'quit'ing the game, you need 2 inputs of a verb and noun\n like 'look' or 'get', then the noun you want to interact with.\n");
+            } else if ("go".equalsIgnoreCase(location[0])) {
+                moveRoom(location[1]);
+            } else if ("look".equalsIgnoreCase(location[0]) && "around".equalsIgnoreCase(location[1]) || "room".equalsIgnoreCase(location[1])) {
+                lookAround();
+            } else if ("look".equalsIgnoreCase(location[0])) {
+                lookItem(location[1], player1.getCurrentRoom().getItems());
+            } else if ("get".equalsIgnoreCase(location[0])) {
+                getItem(location[1], player1.getCurrentRoom().getItems(), player1.getItems());
+            } else if ("check".equalsIgnoreCase(location[0]) && "inventory".equalsIgnoreCase(location[1])) {
+                checkInventory(getPlayer());
+            } else {
+                System.out.println("Invalid input, your action are 'go' to a location and 'look' to see what is around");
+                playGame(player1);
             }
-        }
-
-        else{
-            System.out.println("Invalid input, your action are 'go' to a location and 'look' to see what is around");
+        } catch (IndexOutOfBoundsException e) {
             playGame(player1);
         }
     }
 
-    public void moveRoom(String location) {
+    public void moveRoom(String location) throws IOException, ParseException {
         Player player = getPlayer();
         List<Room> rooms = map.stream().filter(room -> room.getName().equalsIgnoreCase(location)).collect(Collectors.toList());
+        if (rooms.size() == 0) {
+            System.out.println("There is no room of that name.");
+            playGame(getPlayer());
+        }
         player.setCurrentRoom(rooms.get(0));
 
     }
@@ -129,7 +132,24 @@ public class Game {
         Item taken = itemToGrab.get(0);
         roomItems.remove(taken);
         playerItems.add(taken);
+        setCurrentItems(getPlayer().getItems());
         System.out.println("You picked up the " + taken.getName() + "!");
+
+    }
+
+    public boolean checkInventory(Player player1) throws IOException, ParseException {
+        player1.setItems(getCurrentItems());
+        for (Item item: player1.getItems()
+        ) {
+            if (player1.getItems().size() == 0) {
+                System.out.println("You have no items in your inventory");
+                return true;
+            } else {
+                System.out.println(item);
+            }
+
+        }
+        return true;
 
     }
 
