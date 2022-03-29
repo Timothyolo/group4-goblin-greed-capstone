@@ -69,11 +69,6 @@
 		"value": 1
 	},
 	{
-		"name": "map",
-		"desc": "A map of the castle",
-		"value": 1
-	},
-	{
 		"name": "wine",
 		"desc": "An ancient brand of wine that you wonder might still be good.",
 		"value": 1
