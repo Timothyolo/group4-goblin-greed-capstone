@@ -15,6 +15,7 @@ public class Player {
     private Room currentRoom;
 
 
+
     public Player(String name, long hp, long attack) {
         setName(name);
         setHp(hp);

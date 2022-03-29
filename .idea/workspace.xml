@@ -7,20 +7,8 @@
     <list default="true" id="6c6f596e-3047-4150-9fb0-0799964967fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Items/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Items/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/items.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/items.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/rooms.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/rooms.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Players/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/rooms.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/rooms.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/storyItem.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/storyItem.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/weapons.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/weapons.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Players/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +77,42 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/GameLogic/Game.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/GameLogic/Game.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/GameLogic/Game.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/GameLogic/Game.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/GameLogic/Game.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/GameLogic/Game.java</url>
+          <line>151</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
