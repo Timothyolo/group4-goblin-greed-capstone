@@ -11,6 +11,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Items/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Items/Item.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/items.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/items.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/rooms.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/rooms.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Players/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />

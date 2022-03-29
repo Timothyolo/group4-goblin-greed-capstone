@@ -42,7 +42,7 @@ public class Game {
         Scanner in2 = new Scanner(System.in);
         System.out.println("Ok, " + you.getName() + " this isn't going to be an easy adventure are you ready?");
         String startGame = in2.nextLine();
-        if ("start".equalsIgnoreCase(startGame)) {
+        if ("start".equalsIgnoreCase(startGame) || "yes".equalsIgnoreCase(startGame)) {
             setPlayer(you);
             Player player = getPlayer();
             player.setCurrentRoom(map.get(0));
@@ -66,6 +66,9 @@ public class Game {
             System.out.println("Thanks for playing!");
             System.exit(130);
         }
+        else if(location.length != 2){
+            System.out.println("If you are not 'quit'ing the game, you need 2 inputs of a verb and noun\n like 'look' or 'get', then the noun you want to interact with.\n");
+        }
         else if("go".equalsIgnoreCase(location[0])){
             moveRoom(location[1]);
         }
@@ -84,6 +87,11 @@ public class Game {
                 System.out.println(item);
 
             }
+        }
+
+        else{
+            System.out.println("Invalid input, your action are 'go' to a location and 'look' to see what is around");
+            playGame(player1);
         }
     }
 
