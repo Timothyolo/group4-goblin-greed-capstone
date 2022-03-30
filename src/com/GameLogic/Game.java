@@ -1,5 +1,4 @@
 package com.GameLogic;
-import com.Art.ASCII_Art;
 import com.Items.Item;
 import com.Players.Player;
 import com.Imports.ImportJSON;
@@ -15,11 +14,10 @@ import java.util.*;
 // Definition of what is a game
 public class Game {
     private Player player;
-    ImportJSON assets = new ImportJSON();
-    ArrayList<Room> map = (ArrayList<Room>) assets.getMap();
-    ArrayList<Player> npcs = (ArrayList<Player>) assets.getNpcs();
-    ArrayList<Item> items = (ArrayList<Item>) assets.getItems();
-    ASCII_Art artWork = new ASCII_Art();
+
+    ArrayList<Room> map = (ArrayList<Room>) ImportJSON.getMap();
+    ArrayList<Player> npcs = (ArrayList<Player>) ImportJSON.getNpcs();
+    ArrayList<Item> items = (ArrayList<Item>) ImportJSON.getItems();
 
 
     // Constructor for an instance of the game
@@ -36,10 +34,9 @@ public class Game {
 
 
     // Method for creating a game
-    public boolean beginGame() {
+    public boolean beginGame() throws IOException, InterruptedException {
         Scanner in = new Scanner(System.in);
-        System.out.println(artWork.title_screen_image());
-        System.out.println("Welcome to Goblin's Greed great warrior! What is your name: ");
+        Printer.print(Story.beginGameText());
         String name = in.nextLine();
         Player you = new Player(name,100,15);
         Scanner in2 = new Scanner(System.in);
@@ -62,21 +59,20 @@ public class Game {
 
     public void playGame(Player player1) throws IOException, ParseException, InterruptedException {
         player1.setItems(player1.getItems());
-        System.out.println(player1.getName() + " is at the " + player1.getCurrentRoom().getName());
+        System.out.println("\n" + player1.getName() + " is at the " + player1.getCurrentRoom().getName());
         System.out.println(player1.getCurrentRoom().getDesc());
         Scanner in = new Scanner(System.in);
-        System.out.println("What you would like to do?");
-        System.out.println("Type 'help' for more information");
+        Printer.print(Story.promptPlayerMessage());
         String[] location = in.nextLine().split(" ");
         try {
             if ("quit".equalsIgnoreCase(location[0])) {
-                System.out.println("Thanks for playing!");
+                Printer.print(Story.quitMessage());
                 System.exit(130);
-            } else if ("help".equalsIgnoreCase(location[0])){
-                System.out.println(Story.tutorial());
+            } else if ("help".equalsIgnoreCase(location[0]) || "h".equalsIgnoreCase(location[0])){
+                Printer.print(Story.tutorial());
 
             } else if (location.length != 2) {
-                System.out.println("If you are not 'quit'ing the game, you need 2 inputs of a verb and noun\n like 'look' or 'get', then the noun you want to interact with.\n");
+                Printer.print(Story.invalidEntryMessage1());
             } else if ("go".equalsIgnoreCase(location[0])) {
                 PlayerMechanics.moveRoom(location[1], this);
             } else if ("look".equalsIgnoreCase(location[0]) && "around".equalsIgnoreCase(location[1]) || "room".equalsIgnoreCase(location[1])) {
@@ -91,7 +87,7 @@ public class Game {
             } else if ("check".equalsIgnoreCase(location[0]) && "inventory".equalsIgnoreCase(location[1])) {
                 PlayerMechanics.checkInventory(getPlayer());
             } else {
-                System.out.println("Invalid input, your action are 'go' to a location and 'look' to see what is around");
+                Printer.print(Story.invalidEntryMessage2());
                 playGame(player1);
             }
         } catch (IndexOutOfBoundsException e) {
