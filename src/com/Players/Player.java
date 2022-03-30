@@ -15,6 +15,7 @@ public class Player {
     private Room currentRoom;
 
 
+
     public Player(String name, long hp, long attack) {
         setName(name);
         setHp(hp);
@@ -53,7 +54,13 @@ public class Player {
         items.remove(item);
     }
 
+    public Collection<Item> getItems() {
+        return items;
+    }
 
+    public void setItems(Collection<Item> items) {
+        this.items = items;
+    }
 
     public String getName() {
         return name;

@@ -1,25 +1,23 @@
 import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import com.GameLogic.Game;
-import com.Imports.ImportJSON;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, ParseException {
+    public static void main(String[] args) throws IOException, ParseException, InterruptedException {
         Game newGame = new Game();
 
         boolean startGame = newGame.beginGame();
-        while(true) {
+        while (true) {
 
-            if(startGame){
+            if (startGame) {
                 newGame.playGame(newGame.getPlayer());
-            }
-            else{
+            } else {
                 break;
             }
 
         }
-
+    }
 
 
 
@@ -29,4 +27,4 @@ public class Main {
 
 
     }
-}
+

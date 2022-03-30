@@ -1,7 +1,7 @@
 package com.Art;
 
 public class ASCII_Art {
-    public StringBuilder title_screen_image(){
+    public static StringBuilder title_screen_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("   ▄██████▄   ▄██████▄  ▀█████████▄   ▄█        ▄█  ███▄▄▄▄      ▄████████ \n");
         str.append("  ███    ███ ███    ███   ███    ███ ███       ███  ███▀▀▀██▄   ███    ███ \n");
@@ -26,7 +26,15 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder goblin_image(){
+    public static StringBuilder text_Spacer(){
+        StringBuilder str = new StringBuilder("\n");
+        System.out.println(".-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._.");
+
+
+        return str;
+    }
+
+    public static StringBuilder goblin_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣀⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ \n");
         str.append("⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣠⠤⢶⣿⣿⣿⡿⠋⠛⢻⣷⣤⡀⠄⠄⠄⠄⠄⠄⠄ \n");
@@ -48,7 +56,7 @@ public class ASCII_Art {
     }
 
 
-    public StringBuilder game_over_image(){
+    public static StringBuilder game_over_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢤⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n");
         str.append("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⡾⠿⢿⡀⠀⠀⠀⠀⣠⣶⣿⣷⠀⠀⠀⠀\n");
@@ -74,7 +82,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder dungeon_entrance_image(){
+    public static StringBuilder dungeon_entrance_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("▓▓▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓░░░░▒▒▒▒▒▒░░░░░░▒▒░░░░░░░░░░░░  ░░░░░░░░░░░░░░░░░░░░░░  ░░      ░░  ░░░░  ░░░░░░░░░░░░░░▒▒▒▒▒▒▓▓▒▒▓▓▓▓▓▓████▓▓▓▓▓▓ \n");
         str.append("▓▓▒▒▓▓▒▒▒▒░░▒▒▒▒▒▒▒▒▓▓▓▓▒▒▓▓░░░░▓▓▒▒▓▓▒▒░░░░▒▒░░░░▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░        ░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓████▓▓▒▒▓▓ \n");
@@ -123,7 +131,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder hallway_image(){
+    public static StringBuilder hallway_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("▓▓▓▓████████████████████████████████▒▒▓▓██████████████▓▓▓▓▓▓██████▓▓▓▓▓▓▓▓██████████████████████████████████████████████████████████████▓▓▓▓██████▓▓████████████\n" +
                 "████████▓▓██████████████████████████▓▓██████████████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████████████████████████████████████████████████████▓▓▓▓██████████▓▓████████████\n" +
@@ -172,7 +180,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder cave_image(){
+    public static StringBuilder cave_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("██████████████████████████████████████▓▓██████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████\n" +
                 "████████████████████████████████████▓▓▓▓▓▓██▓▓▓▓▓▓▓▓▒▒▓▓▓▓▒▒▓▓▓▓▒▒▓▓▓▓██▓▓██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████\n" +
@@ -223,7 +231,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder dungeon_interior_image(){
+    public static StringBuilder dungeon_interior_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("██████████████████████████████████████████▓▓▓▓▓▓▓▓██████████████████████████▓▓▓▓██████████████████████████████████▓▓▓▓▓▓████████████████████████████▓▓▓▓▓▓██████████████████████████████████████████▓▓\n" +
                 "████████████████████████████████████████▓▓▓▓░░▒▒▓▓██████████████████████████▒▒▓▓██████████████████████████████████▒▒▒▒▒▒████████████████████████████▒▒▒▒▒▒████████████████████████████████████████▓▓▒▒\n" +
@@ -274,7 +282,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder dungeon_overview_image1(){
+    public static StringBuilder dungeon_overview_image1(){
         StringBuilder str = new StringBuilder("\n");
         str.append("██████████████████████████████████████▒▒  ▓▓▓▓▒▒▒▒▓▓░░████████████████████████████████████████████████████████████\n" +
                 "████████████████████████████████████████░░▓▓▒▒▒▒▒▒▓▓░░████████████████████████████████████████████████████████████\n" +
@@ -313,7 +321,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder dungeon_overview_image2(){
+    public static StringBuilder dungeon_overview_image2(){
         StringBuilder str = new StringBuilder("\n");
         str.append("████████████████████████████████████████████████████░░░░▓▓▓▓▒▒▒▒▒▒▓▓▒▒░░████████████████████████████████████████████████████████████████████\n" +
                 "████████████████████████████████████████████████████░░░░▓▓▓▓▒▒▒▒▓▓▓▓░░░░████████████████████████████████████████████████████████████████████\n" +
@@ -359,7 +367,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder dungeon_overview_image3(){
+    public static StringBuilder dungeon_overview_image3(){
         StringBuilder str = new StringBuilder("\n");
         str.append("██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████\n" +
                 "████████████████████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒░░▒▒░░░░▒▒░░░░▒▒░░████████████████████████░░▒▒░░░░▒▒░░░░▒▒░░░░▒▒░░▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████████████████████\n" +
@@ -419,7 +427,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder key_image(){
+    public static StringBuilder key_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("                                                                                                                                                      \n" +
                 "                                                                                                                                                      \n" +
@@ -500,7 +508,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder eye_image(){
+    public static StringBuilder eye_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("████████████████████████████████████████████████████████████████████████████████████████\n" +
                 "████████████████████████████████░░░░▒▒░░▒▒░░░░░░▒▒░░▒▒░░▒▒░░████████████████████████████\n" +
@@ -550,7 +558,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder mace_image(){
+    public static StringBuilder mace_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("                                                                                            \n" +
                 "                                                                                            \n" +
@@ -590,7 +598,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder sword_image(){
+    public static StringBuilder sword_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("                                                          ░░\n" +
                 "                                                        ░░▒▒\n" +
@@ -626,7 +634,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder axe_image(){
+    public static StringBuilder axe_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("                                          \n" +
                 "                          ░░              \n" +
@@ -665,7 +673,7 @@ public class ASCII_Art {
         return str;
     }
 
-    public StringBuilder hammer_image(){
+    public static StringBuilder hammer_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("                            ▒▒░░░░░░▒▒▓▓▒▒▒▒                      \n" +
                 "                          ░░▒▒░░░░░░▓▓▓▓▓▓▒▒                      \n" +
