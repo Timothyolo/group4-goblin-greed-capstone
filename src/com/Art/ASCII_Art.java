@@ -26,6 +26,14 @@ public class ASCII_Art {
         return str;
     }
 
+    public static StringBuilder text_Spacer(){
+        StringBuilder str = new StringBuilder("\n");
+        System.out.println(".-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._..-._.");
+
+
+        return str;
+    }
+
     public static StringBuilder goblin_image(){
         StringBuilder str = new StringBuilder("\n");
         str.append("⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣀⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ \n");
