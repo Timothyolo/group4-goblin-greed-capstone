@@ -22,7 +22,7 @@ public class Story {
     public static String promptPlayerMessage(){
         return "What you would like to do?\n" +
                 "Type 'help' for more information\n" +
-                "________________________________________________________________________________________________________";
+                ASCII_Art.text_Spacer();
     }
 
     public static String quitMessage(){
