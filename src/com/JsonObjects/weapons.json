@@ -11,13 +11,13 @@
 	"value": 1
   },
   {
-    "name": "war hammer",
+    "name": "war-hammer",
     "desc": "Looks like you could cause eom dents with this",
     "attack": 5
 	"value": 1
   },
   {
-    "name": "Great sword",
+    "name": "Great-sword",
     "desc": "It's quite heavy but it carries it's weight with every swing",
     "attack": 12
 	"value": 1
@@ -53,31 +53,31 @@
 	"value": 1
   },
   {
-    "name": "Magic sword",
+    "name": "Magic-sword",
     "desc": "A short sword imbued with magical energy",
     "attack": 17
 	"value": 1
   },
   {
-    "name": "The hammer of kings",
+    "name": "The-hammer-of-kings",
     "desc": "A hammer said to turn smash anything to dust",
     "attack": 24
 	"value": 1
   },
   {
-    "name": "Dark knife of the kings assassin",
+    "name": "Dark-knife-of-the-kings-assassin",
     "desc": "Said to have been used to smite down the old kings foes in secrecy",
     "attack": 20
 	"value": 1
   },
   {
-    "name": "Spiked knuckles",
+    "name": "Spiked-knuckles",
     "desc": "Sometimes, your fists are the best answer",
     "attack": 4
 	"value": 1
   },
   {
-    "name": "Greatest sword",
+    "name": "Greatest-sword",
     "desc": "A great sword, but bigger",
     "attack": 12
 	"value": 1
@@ -95,7 +95,7 @@
 	"value": 1
   },
   {
-    "name": "Twin blade",
+    "name": "Twin-blade",
     "desc": "A polearm with blades at both ends",
     "attack": 5
 	"value": 1
@@ -125,7 +125,7 @@
 	"value": 1
   },
   {
-    "name": "the holy hand grenade",
+    "name": "the-holy-hand-grenade",
     "desc": "Used to vanquish rabbits",
     "attack": 100
 	"value": 1
