@@ -16,7 +16,7 @@ import java.util.Collection;
 
 public class ImportJSON {
 
-    public Collection<Item> getItems() throws IOException, ParseException {
+    public static Collection<Item> getItems() throws IOException, ParseException {
         Object objItems = new JSONParser().parse(new FileReader("src/com/JsonObjects/items.json"));
         Collection<Object> inventory = new ArrayList<>();
         Collection<Item> items = new ArrayList<>();
@@ -33,7 +33,7 @@ public class ImportJSON {
         return items;
     }
 
-    public Collection<Player> getNpcs() throws IOException, ParseException {
+    public static Collection<Player> getNpcs() throws IOException, ParseException {
         Object charaobj = new JSONParser().parse(new FileReader("src/com/JsonObjects/characterList.json"));
         Collection<Object> charjson = new ArrayList<>();
         Collection<Player> npcs = new ArrayList<>();
@@ -48,7 +48,7 @@ public class ImportJSON {
         return npcs;
     }
 
-    public Collection<Room> getMap() throws IOException, ParseException {
+    public static Collection<Room> getMap() throws IOException, ParseException {
         Collection<Object> rooms = new ArrayList<>();
         Collection<Room> map = new ArrayList<>();
         Object obj = new JSONParser().parse(new FileReader("src/com/JsonObjects/rooms.json"));
