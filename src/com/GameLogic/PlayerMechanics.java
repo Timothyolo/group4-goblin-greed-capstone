@@ -3,6 +3,8 @@ package com.GameLogic;
 import com.Items.Item;
 import com.Players.Player;
 import com.Rooms.Room;
+import com.Story.Story;
+import com.Utility.Printer;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -17,7 +19,7 @@ public class PlayerMechanics {
         Player player = game.getPlayer();
         List<Room> rooms = game.map.stream().filter(room -> room.getName().equalsIgnoreCase(location)).collect(Collectors.toList());
         if (rooms.size() == 0) {
-            System.out.println("There is no room of that name.");
+            Printer.print(Story.noRoomMessage());
             game.playGame(game.getPlayer());
         }
         player.setCurrentRoom(rooms.get(0));
@@ -26,7 +28,7 @@ public class PlayerMechanics {
     public static void lookAround(Game game){
         Player player = game.getPlayer();
         Room currentRoom = player.getCurrentRoom();
-        System.out.println("You see: \n");
+        System.out.println("You see:");
         ArrayList<Item> roomItems = (ArrayList<Item>) currentRoom.getItems();
         for(int x=0; x< currentRoom.getItems().size(); x++){
             Item s = roomItems.get(x);
@@ -57,15 +59,13 @@ public class PlayerMechanics {
         System.out.println("You picked up the " + taken.getName() + "!");
     }
 
-    public static void checkInventory(Player player1) throws IOException, ParseException {
-        for (Item item: player1.getItems()
-        ) {
-            if (player1.getItems().size() == 0) {
-                System.out.println("You have no items in your inventory");
-            } else {
+    public static void checkInventory(Player player1) throws IOException, ParseException, InterruptedException {
+        if (player1.getItems().size() == 0) {
+            Printer.print(Story.nothingInInventory());}
+        else{
+            for (Item item: player1.getItems()) {
                 System.out.println(item.getName());
             }
-
         }
 
     }
