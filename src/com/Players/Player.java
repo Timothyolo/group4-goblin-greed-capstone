@@ -1,5 +1,6 @@
 package com.Players;
 
+import com.Items.Armor;
 import com.Items.Item;
 import com.Items.Weapons;
 import com.Rooms.Room;
@@ -14,8 +15,8 @@ public class Player {
     private long attack;
     private Collection<Item> items = new ArrayList<>();
     private Room currentRoom;
-    private Item equippedWeapon;
-    private Item equippedArmor;
+    private Weapons equippedWeapon = null;
+    private Armor equippedArmor = null;
 
 
     public Player(String name, long hp, long attack) {
@@ -23,6 +24,11 @@ public class Player {
         setHp(hp);
         setAttack(attack);
     }
+
+    public int getRandomNumber(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
+
 
     public long getHp() {
         return hp;
@@ -72,24 +78,37 @@ public class Player {
         this.name = name;
     }
 
-    public Item getEquippedWeapon() {
+    public Weapons getEquippedWeapon() {
+
         return equippedWeapon;
     }
 
-    public void setEquippedWeapon(Item equippedWeapon) {
+    public void setEquippedWeapon(Weapons equippedWeapon) {
         this.equippedWeapon = equippedWeapon;
     }
 
-    public Item getEquippedArmor() {
+    public Armor getEquippedArmor() {
         return equippedArmor;
     }
 
-    public void setEquippedArmor(Item equippedArmor) {
+    public void setEquippedArmor(Armor equippedArmor) {
         this.equippedArmor = equippedArmor;
     }
 
     public Player battle(Player enemy) {
-        enemy.setHp(enemy.getHp()-getAttack());
+        int randAtk = getRandomNumber(0,100);
+        if (randAtk > 80) {
+            System.out.println(getName() + " landed a critical hit!");
+            System.out.println(getName() + " dealt "+ (getAttack() * 2) + " damage!");
+            enemy.setHp(enemy.getHp()-(getAttack() * 2) );
+        }
+        else if (randAtk >= 20) {
+            System.out.println(getName() + " dealt "+ getAttack() + " damage!");
+            enemy.setHp(enemy.getHp() - getAttack());
+        }
+         else {
+            System.out.println(getName() + " missed!");
+        }
         return enemy;
     }
 

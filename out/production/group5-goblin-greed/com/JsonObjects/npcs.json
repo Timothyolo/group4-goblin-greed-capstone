@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Keeper_Goblin",
+    "hp": 0,
+    "attack": 0,
+    "dialogue" : ["Oi….what’re you doin ‘ere mate?  This ain’t the place for people who value their life.”\nHe grunts speaking in english rather than the language you heard before.",
+    "Huh?  What do you want?  I got nothin for ya…..now scram!”  His voice echoed in the room.",
+      "If you're feeling under the weather, I recommend you get one of those health drinks with HEAL....if you can find one haah!",
+      "This door?.....Yeah it lead to some hefty treasure, but you'll need a key hehehe.....",
+      "Hmmmmm?...careful out there some of the dwellers of these hallways won't talk to you like me...kekekhehe",
+      "If the game is too hard for you, you can always QUIT out hahakakaha!",
+      "There's plenty of treasure lying around this place as well, but goodluck getting it hhhaaaha!!",
+    "Make sure you're prepared for battle, a knife is better than your bare fists....",
+      "Careful, you could say 'Ghosts and Goblins' roam these rooms hahaha!",
+      "I've heard rumors of a dragon that made it's nest here, but it just a rumor kekeheheh!"],
+    "item": ["key"]
+  },
+  {
+    "name": "Cleric",
+    "hp": 0,
+    "attack": 0,
+    "dialogue": ["You're going in there, its dangerous to go alone, here, take these.", "Do you need healing?"],
+    "item": ["health-potion"]
+  },
+  {
+    "name": "Azure_Dragon",
+    "hp": 0,
+    "attack": 0,
+    "dialogue": ["FOOLISH ADVENTURER, BEGONE FROM MY LAYER!!", "FINE, THEN PERISH LIKE THE REST!!!"],
+    "item": ["the-holy-hand-grenade"]
+  }
+
+]
