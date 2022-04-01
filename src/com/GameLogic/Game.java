@@ -16,8 +16,8 @@ public class Game {
     private Player player;
 
     ArrayList<Room> map = (ArrayList<Room>) ImportJSON.getMap();
-    ArrayList<Player> npcs = (ArrayList<Player>) ImportJSON.getNpcs();
-    ArrayList<Item> items = (ArrayList<Item>) ImportJSON.getItems();
+//    ArrayList<Player> npcs = (ArrayList<Player>) ImportJSON.getNpcs();
+//    ArrayList<Item> items = (ArrayList<Item>) ImportJSON.getItems();
 
 
     // Constructor for an instance of the game
@@ -31,6 +31,8 @@ public class Game {
     public void setPlayer(Player player) {
         this.player = player;
     }
+
+
 
 
     // Method for creating a game
@@ -68,14 +70,19 @@ public class Game {
             if ("quit".equalsIgnoreCase(location[0])) {
                 Printer.print(Story.quitMessage());
                 System.exit(130);
-            } else if ("help".equalsIgnoreCase(location[0]) || "h".equalsIgnoreCase(location[0])){
+            } else if ("help".equalsIgnoreCase(location[0]) || "h".equalsIgnoreCase(location[0])) {
                 Printer.print(Story.tutorial());
 
-            } else if (location.length != 2) {
+            } else if ("stats".equalsIgnoreCase(location[0])) {
+                PlayerMechanics.stats(getPlayer());
+            }
+            else if (location.length != 2) {
                 Printer.print(Story.invalidEntryMessage1());
             } else if ("go".equalsIgnoreCase(location[0])) {
                 PlayerMechanics.moveRoom(location[1], this);
-            } else if ("look".equalsIgnoreCase(location[0]) && "around".equalsIgnoreCase(location[1]) || "room".equalsIgnoreCase(location[1])) {
+            }  else if ("attack".equalsIgnoreCase(location[0])) {
+                BattleMechanics.fight(location[1],getPlayer());
+            }else if ("look".equalsIgnoreCase(location[0]) && "around".equalsIgnoreCase(location[1]) || "room".equalsIgnoreCase(location[1])) {
                 PlayerMechanics.lookAround(this);
             }
             else if("look".equalsIgnoreCase(location[0]) && "map".equalsIgnoreCase(location[1])){

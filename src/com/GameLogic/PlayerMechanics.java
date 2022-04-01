@@ -34,6 +34,13 @@ public class PlayerMechanics {
             Item s = roomItems.get(x);
             System.out.println(s.getName());
         }
+        System.out.println("\nEnemies");
+        if (currentRoom.getEnemy() != null) {
+            System.out.println(currentRoom.getEnemy().getName());
+        } else {
+            System.out.println("There are no enemies here.");
+        }
+
 
     }
 
@@ -74,6 +81,11 @@ public class PlayerMechanics {
         for (Room room: game.map){
             System.out.println(room.getName());
         }
+    }
+    public static void stats(Player player) {
+        System.out.println("Name: "+player.getName());
+        System.out.println("HP: "+player.getHp());
+        System.out.println("Attack Power: "+ player.getAttack());
     }
 
 

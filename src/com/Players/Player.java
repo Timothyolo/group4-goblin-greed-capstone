@@ -13,6 +13,8 @@ public class Player {
     private long attack;
     private Collection<Item> items = new ArrayList<>();
     private Room currentRoom;
+    private Item equippedWeapon;
+    private Item equippedArmor;
 
 
 
@@ -68,6 +70,27 @@ public class Player {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Item getEquippedWeapon() {
+        return equippedWeapon;
+    }
+
+    public void setEquippedWeapon(Item equippedWeapon) {
+        this.equippedWeapon = equippedWeapon;
+    }
+
+    public Item getEquippedArmor() {
+        return equippedArmor;
+    }
+
+    public void setEquippedArmor(Item equippedArmor) {
+        this.equippedArmor = equippedArmor;
+    }
+
+    public Player battle(Player enemy) {
+        enemy.setHp(enemy.getHp()-getAttack());
+        return enemy;
     }
 
 
