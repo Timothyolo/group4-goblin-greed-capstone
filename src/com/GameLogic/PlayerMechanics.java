@@ -1,6 +1,8 @@
 package com.GameLogic;
 
+import com.Items.Armor;
 import com.Items.Item;
+import com.Items.Weapons;
 import com.Players.Player;
 import com.Rooms.Room;
 import com.Story.Story;
@@ -34,6 +36,13 @@ public class PlayerMechanics {
             Item s = roomItems.get(x);
             System.out.println(s.getName());
         }
+        System.out.println("\nEnemies");
+        if (currentRoom.getEnemy() != null) {
+            System.out.println(currentRoom.getEnemy().getName());
+        } else {
+            System.out.println("There are no enemies here.");
+        }
+
 
     }
 
@@ -74,6 +83,57 @@ public class PlayerMechanics {
         for (Room room: game.map){
             System.out.println(room.getName());
         }
+    }
+    public static void stats(Player player) {
+        System.out.println("Name: "+player.getName());
+        System.out.println("HP: "+player.getHp());
+        System.out.println("Attack Power: "+ player.getAttack());
+        if (player.getEquippedWeapon() != null) {
+            System.out.println("Equipped Weapon: " + player.getEquippedWeapon().getName());
+        } else {
+            System.out.println("You don't have an equipped Weapon");
+        }
+
+        if (player.getEquippedArmor() != null) {
+            System.out.println("Equipped Armor: " + player.getEquippedArmor().getName());
+        } else {
+            System.out.println("You don't have any Armor equipped");
+        }
+    }
+
+    public static void equipWeapon(Player player, String item) {
+        List<Item> inventory = (List<Item>) player.getItems().stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
+        if (inventory.size() == 0) {
+            System.out.println("You don't have a weapon with that name");
+        } else {
+            if (player.getEquippedWeapon() != null) {
+                player.setAttack(player.getAttack()-player.getEquippedWeapon().getAttack());
+                player.setEquippedWeapon(null);
+            }
+            System.out.println("You equipped your: " + inventory.get(0).getName());
+            player.setEquippedWeapon((Weapons) inventory.get(0));
+            player.setAttack(player.getAttack() + ((Weapons) inventory.get(0)).getAttack());
+        }
+    }
+
+    public static void equipArmor(Player player, String item) {
+        List<Item> inventory = (List<Item>) player.getItems().stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
+        if (inventory.size() == 0) {
+            System.out.println("You don't have Armor with that name");
+        } else {
+            if (player.getEquippedArmor() != null) {
+                player.setHp(player.getHp()-player.getEquippedArmor().getDefence());
+                player.setEquippedArmor(null);
+            }
+            System.out.println("You equipped your: " + inventory.get(0).getName());
+            player.setEquippedArmor((Armor) inventory.get(0));
+            player.setHp(player.getHp() + ((Armor) inventory.get(0)).getDefence());
+        }
+    }
+
+    public static boolean checkInstance(Player player,String item) {
+        List<Item> inventoryItem = (List<Item>) player.getItems().stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
+        return inventoryItem.get(0) instanceof Weapons;
     }
 
 

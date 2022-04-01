@@ -1,6 +1,8 @@
 package com.Players;
 
+import com.Items.Armor;
 import com.Items.Item;
+import com.Items.Weapons;
 import com.Rooms.Room;
 
 import java.util.ArrayList;
@@ -13,6 +15,8 @@ public class Player {
     private long attack;
     private Collection<Item> items = new ArrayList<>();
     private Room currentRoom;
+    private Weapons equippedWeapon = null;
+    private Armor equippedArmor = null;
 
 
 
@@ -21,6 +25,11 @@ public class Player {
         setHp(hp);
         setAttack(attack);
     }
+
+    public int getRandomNumber(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
+
 
     public long getHp() {
         return hp;
@@ -68,6 +77,39 @@ public class Player {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Weapons getEquippedWeapon() {
+        return equippedWeapon;
+    }
+
+    public void setEquippedWeapon(Weapons equippedWeapon) {
+        this.equippedWeapon = equippedWeapon;
+    }
+
+    public Armor getEquippedArmor() {
+        return equippedArmor;
+    }
+
+    public void setEquippedArmor(Armor equippedArmor) {
+        this.equippedArmor = equippedArmor;
+    }
+
+    public Player battle(Player enemy) {
+        int randAtk = getRandomNumber(0,100);
+        if (randAtk > 80) {
+            System.out.println(getName() + " landed a critical hit!");
+            System.out.println(getName() + " dealt "+ (getAttack() * 2) + " damage!");
+            enemy.setHp(enemy.getHp()-(getAttack() * 2) );
+        }
+        else if (randAtk >= 20) {
+            System.out.println(getName() + " dealt "+ getAttack() + " damage!");
+            enemy.setHp(enemy.getHp() - getAttack());
+        }
+         else {
+            System.out.println(getName() + " missed!");
+        }
+        return enemy;
     }
 
 
