@@ -1,5 +1,6 @@
 package com.Players;
 
+import com.Items.Armor;
 import com.Items.Item;
 import com.Items.Weapons;
 import com.Rooms.Room;
@@ -14,8 +15,8 @@ public class Player {
     private long attack;
     private Collection<Item> items = new ArrayList<>();
     private Room currentRoom;
-    private Item equippedWeapon;
-    private Item equippedArmor;
+    private Weapons equippedWeapon;
+    private Armor equippedArmor;
 
 
     public Player(String name, long hp, long attack) {
@@ -72,19 +73,19 @@ public class Player {
         this.name = name;
     }
 
-    public Item getEquippedWeapon() {
+    public Weapons getEquippedWeapon() {
         return equippedWeapon;
     }
 
-    public void setEquippedWeapon(Item equippedWeapon) {
+    public void setEquippedWeapon(Weapons equippedWeapon) {
         this.equippedWeapon = equippedWeapon;
     }
 
-    public Item getEquippedArmor() {
+    public Armor getEquippedArmor() {
         return equippedArmor;
     }
 
-    public void setEquippedArmor(Item equippedArmor) {
+    public void setEquippedArmor(Armor equippedArmor) {
         this.equippedArmor = equippedArmor;
     }
 
