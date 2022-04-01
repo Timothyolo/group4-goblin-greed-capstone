@@ -14,8 +14,9 @@ public class Room {
   private String desc;
   private Collection<Item> items = new ArrayList<>();
 
-  ImportJSON assets = new ImportJSON();
-  ArrayList<Item> roomItems = (ArrayList<Item>) assets.getItems();
+  ArrayList<Item> roomItems = (ArrayList<Item>) ImportJSON.getItems();
+  ArrayList<Item> weapons = (ArrayList<Item>) ImportJSON.getWeapons();
+  ArrayList<Item> armor = (ArrayList<Item>) ImportJSON.getArmor();
 
   public int getRandomNumber(int min, int max) {
       return (int) ((Math.random() * (max - min)) + min);
@@ -28,6 +29,8 @@ public class Room {
   }
 
   public void generateItems(){
+      roomItems.addAll(weapons);
+      roomItems.addAll(armor);
       for (int i=0; i<4; i++) {
           addItem(roomItems.get(getRandomNumber(0,roomItems.size())));
       }

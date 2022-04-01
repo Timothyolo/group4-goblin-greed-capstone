@@ -1,4 +1,4 @@
-{
+[{
     "name": "mace",
     "desc": "Blunt and ready for a holy crusade",
     "attack": 3,
@@ -130,3 +130,4 @@
     "attack": 100
 	"value": 1
   }
+  ]

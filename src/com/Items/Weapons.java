@@ -2,7 +2,7 @@ package com.Items;
 
 public class Weapons extends Item{
     private long attack;
-    public Weapons(String name, String desc, long attack, long value) {
+    public Weapons(String name, String desc, long value, long attack) {
         super(name, desc, value);
         setAttack(attack);
     }
