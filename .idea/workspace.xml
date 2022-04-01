@@ -9,24 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6f596e-3047-4150-9fb0-0799964967fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/PlayerMechanics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/PlayerMechanics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Players/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Rooms/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Rooms/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/characterList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/characterList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Items/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Items/Weapons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Items/Weapons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/armor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/armor.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/weapons.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/weapons.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Rooms/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Rooms/Room.java" afterDir="false" />
-    </list>
+    <list default="true" id="6c6f596e-3047-4150-9fb0-0799964967fa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
