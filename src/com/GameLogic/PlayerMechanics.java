@@ -1,6 +1,7 @@
 package com.GameLogic;
 
 import com.Items.Item;
+import com.Items.Weapons;
 import com.Players.Player;
 import com.Rooms.Room;
 import com.Story.Story;
@@ -86,6 +87,27 @@ public class PlayerMechanics {
         System.out.println("Name: "+player.getName());
         System.out.println("HP: "+player.getHp());
         System.out.println("Attack Power: "+ player.getAttack());
+        if (player.getEquippedWeapon() != null) {
+            System.out.println("Equipped Weapon: " + player.getEquippedWeapon().getName());
+        } else {
+            System.out.println("You don't have an equipped Weapon");
+        }
+    }
+
+    public static void equipWeapon(Player player, String item) {
+        List<Item> inventory = (List<Item>) player.getItems().stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
+        if (inventory.size() == 0) {
+            System.out.println("You don't have a weapon with that name");
+        } else {
+            if (player.getEquippedWeapon() != null) {
+                player.setAttack(player.getAttack()-player.getEquippedWeapon().getAttack());
+                player.setEquippedWeapon(null);
+            }
+            System.out.println("You equipped your: " + inventory.get(0).getName());
+            player.setEquippedWeapon((Weapons) inventory.get(0));
+            player.setAttack(player.getAttack() + ((Weapons) inventory.get(0)).getAttack());
+
+        }
     }
 
 

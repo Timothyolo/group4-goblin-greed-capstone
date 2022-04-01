@@ -16,8 +16,6 @@ public class Game {
     private Player player;
 
     ArrayList<Room> map = (ArrayList<Room>) ImportJSON.getMap();
-//    ArrayList<Player> npcs = (ArrayList<Player>) ImportJSON.getNpcs();
-//    ArrayList<Item> items = (ArrayList<Item>) ImportJSON.getItems();
 
 
     // Constructor for an instance of the game
@@ -91,7 +89,9 @@ public class Game {
                 PlayerMechanics.lookItem(location[1], player1.getCurrentRoom().getItems(),player1.getItems());
             } else if ("get".equalsIgnoreCase(location[0])) {
                 PlayerMechanics.getItem(location[1], player1.getCurrentRoom().getItems(), player1.getItems());
-            } else if ("check".equalsIgnoreCase(location[0]) && "inventory".equalsIgnoreCase(location[1])) {
+            } else if ("equip".equalsIgnoreCase(location[0])) {
+                PlayerMechanics.equipWeapon(getPlayer(),location[1]);
+            }else if ("check".equalsIgnoreCase(location[0]) && "inventory".equalsIgnoreCase(location[1])) {
                 PlayerMechanics.checkInventory(getPlayer());
             } else {
                 Printer.print(Story.invalidEntryMessage2());
