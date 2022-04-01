@@ -1,6 +1,8 @@
 package com.Imports;
 
+import com.Items.Armor;
 import com.Items.Item;
+import com.Items.Weapons;
 import com.Players.Player;
 import com.Rooms.Room;
 import org.json.simple.JSONArray;
@@ -61,5 +63,37 @@ public class ImportJSON {
             map.add(rm);
         }
         return map;
+    }
+    public static Collection<Item> getWeapons() throws IOException, ParseException {
+        Object objItems = new JSONParser().parse(new FileReader("src/com/JsonObjects/weapons.json"));
+        Collection<Object> inventory = new ArrayList<>();
+        Collection<Item> weapons = new ArrayList<>();
+        JSONArray jaItems = (JSONArray) objItems;
+        inventory.addAll(jaItems);
+
+        for (Object obItems:
+                inventory) {
+            JSONObject inventoryItem = (JSONObject) obItems;
+            Item questItem;
+            questItem = new Weapons((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"), (Long) inventoryItem.get("attack"));
+            weapons.add(questItem);
+        }
+        return weapons;
+    }
+    public static Collection<Item> getArmor() throws IOException, ParseException {
+        Object objItems = new JSONParser().parse(new FileReader("src/com/JsonObjects/armor.json"));
+        Collection<Object> inventory = new ArrayList<>();
+        Collection<Item> armor = new ArrayList<>();
+        JSONArray jaItems = (JSONArray) objItems;
+        inventory.addAll(jaItems);
+
+        for (Object obItems:
+                inventory) {
+            JSONObject inventoryItem = (JSONObject) obItems;
+            Item questItem;
+            questItem = new Armor((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"), (Long) inventoryItem.get("defense"));
+            armor.add(questItem);
+        }
+        return armor;
     }
 }
