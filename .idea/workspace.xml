@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="group5-goblin-greed:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6f596e-3047-4150-9fb0-0799964967fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/armor.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/armor.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/weapons.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/weapons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/PlayerMechanics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/PlayerMechanics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Players/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Rooms/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Rooms/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/characterList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/characterList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Rooms/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Rooms/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +53,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JAR Application.group5-goblin-greed.jar">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="group5-goblin-greed" />
@@ -48,8 +61,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="group5-goblin-greed.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/group5_goblin_greed_jar/group5-goblin-greed.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.group5-goblin-greed.jar" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

@@ -55,7 +55,7 @@
 	 	"attack": 2
 	 },
 	 {
-	 	"name": "Starved wolf",
+	 	"name": "Starved-wolf",
 	 	"hp": 20,
 	 	"attack": 4
 	 },
@@ -75,22 +75,22 @@
 	 	"attack": 3
 	 },
 	 {
-	 	"name": "Fire elemental",
+	 	"name": "Fire-elemental",
 	 	"hp": 24,
 	 	"attack": 6
 	 },
 	 {
-	 	"name": "Earth elemental",
+	 	"name": "Earth-elemental",
 	 	"hp": 52,
 	 	"attack": 3
 	 },
 	 {
-	 	"name": "Water elemental",
+	 	"name": "Water-elemental",
 	 	"hp": 33,
 	 	"attack": 4
 	 },
 	 {
-	 	"name": "Sword master",
+	 	"name": "Sword-master",
 	 	"hp": 44,
 	 	"attack": 7
 	 },
@@ -100,7 +100,7 @@
 	 	"attack": 2
 	 },
 	 {
-	 	"name": "Giant Spider",
+	 	"name": "Giant-Spider",
 	 	"hp": 22,
 	 	"attack": 3
 	 },
