@@ -90,7 +90,11 @@ public class Game {
             } else if ("get".equalsIgnoreCase(location[0])) {
                 PlayerMechanics.getItem(location[1], player1.getCurrentRoom().getItems(), player1.getItems());
             } else if ("equip".equalsIgnoreCase(location[0])) {
+                if(PlayerMechanics.checkInstance(getPlayer(),location[1])) {
                 PlayerMechanics.equipWeapon(getPlayer(),location[1]);
+                } else {
+                    PlayerMechanics.equipArmor(getPlayer(),location[1]);
+                }
             }else if ("check".equalsIgnoreCase(location[0]) && "inventory".equalsIgnoreCase(location[1])) {
                 PlayerMechanics.checkInventory(getPlayer());
             } else {

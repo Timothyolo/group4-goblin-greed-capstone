@@ -17,11 +17,10 @@ public class BattleMechanics {
         List<Player> enemyToFight = ImportJSON.getNpcs().stream().filter(ene -> ene.getName().equalsIgnoreCase(enemy)).collect(Collectors.toList());
         Player enemyFighter = enemyToFight.get(0);
         System.out.println("You started a battle with: "+enemyFighter.getName());
-
         Scanner in = new Scanner(System.in);
         while(true) {
+            System.out.println("Type: 'attack' to deal damage, 'run' to escape from battle, 'health' to see current health");
             if ("attack".equalsIgnoreCase(in.nextLine())){
-                System.out.println("Type: 'attack' to deal damage, 'run' to escape from battle, 'health' to see current health");
                 player.battle(enemyFighter);
                 enemyFighter.battle(player);
                 System.out.println("Enemy HP is now: "+ enemyFighter.getHp());
@@ -31,10 +30,7 @@ public class BattleMechanics {
             } else if("run".equalsIgnoreCase(in.nextLine())) {
                 break;
             }
-
-
         }
-
     }
 
     public static List<Player> checkFight(Player player,Player enemy) throws IOException, ParseException {
