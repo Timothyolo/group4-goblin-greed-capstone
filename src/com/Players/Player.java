@@ -1,6 +1,7 @@
 package com.Players;
 
 import com.Items.Item;
+import com.Items.Weapons;
 import com.Rooms.Room;
 
 import java.util.ArrayList;
@@ -15,7 +16,6 @@ public class Player {
     private Room currentRoom;
     private Item equippedWeapon;
     private Item equippedArmor;
-
 
 
     public Player(String name, long hp, long attack) {
