@@ -19,6 +19,7 @@ public class Player {
     private Armor equippedArmor = null;
 
 
+
     public Player(String name, long hp, long attack) {
         setName(name);
         setHp(hp);
@@ -79,7 +80,6 @@ public class Player {
     }
 
     public Weapons getEquippedWeapon() {
-
         return equippedWeapon;
     }
 
