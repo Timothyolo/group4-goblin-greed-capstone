@@ -89,7 +89,10 @@ public class Game {
                 PlayerMechanics.lookItem(location[1], player1.getCurrentRoom().getItems(),player1.getItems());
             } else if ("get".equalsIgnoreCase(location[0])) {
                 PlayerMechanics.getItem(location[1], player1.getCurrentRoom().getItems(), player1.getItems());
-            } else if ("equip".equalsIgnoreCase(location[0])) {
+            } else if ("drop".equalsIgnoreCase(location[0])) {
+                PlayerMechanics.dropItem(location[1], player1.getCurrentRoom().getItems(), player1.getItems());
+            }
+            else if ("equip".equalsIgnoreCase(location[0])) {
                 if(PlayerMechanics.checkInstance(getPlayer(),location[1])) {
                 PlayerMechanics.equipWeapon(getPlayer(),location[1]);
                 } else {

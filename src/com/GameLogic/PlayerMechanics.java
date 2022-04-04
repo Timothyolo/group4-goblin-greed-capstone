@@ -68,6 +68,14 @@ public class PlayerMechanics {
         System.out.println("You picked up the " + taken.getName() + "!");
     }
 
+    public static void dropItem(String item, Collection<Item> roomItems, Collection<Item> playerItems) {
+        List<Item> itemToGrab = playerItems.stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
+        Item taken = itemToGrab.get(0);
+        playerItems.remove(taken);
+        roomItems.add(taken);
+        System.out.println("You dropped the " + taken.getName() + "!");
+    }
+
     public static void checkInventory(Player player1) throws IOException, ParseException, InterruptedException {
         if (player1.getItems().size() == 0) {
             Printer.print(Story.nothingInInventory());}
