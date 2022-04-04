@@ -10,16 +10,15 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
 public class ImportJSON {
 
     public static Collection<Item> getItems() throws IOException, ParseException {
-        Object objItems = new JSONParser().parse(new FileReader("src/com/JsonObjects/items.json"));
+        InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/items.json"));
+        Object objItems = new JSONParser().parse(isr);
         Collection<Object> inventory = new ArrayList<>();
         Collection<Item> items = new ArrayList<>();
         JSONArray jaItems = (JSONArray) objItems;
@@ -36,7 +35,8 @@ public class ImportJSON {
     }
 
     public static Collection<Player> getNpcs() throws IOException, ParseException {
-        Object charaobj = new JSONParser().parse(new FileReader("src/com/JsonObjects/characterList.json"));
+        InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/characterList.json"));
+        Object charaobj = new JSONParser().parse(isr);
         Collection<Object> charjson = new ArrayList<>();
         Collection<Player> npcs = new ArrayList<>();
         JSONArray ch = (JSONArray) charaobj;
@@ -53,7 +53,8 @@ public class ImportJSON {
     public static Collection<Room> getMap() throws IOException, ParseException {
         Collection<Object> rooms = new ArrayList<>();
         Collection<Room> map = new ArrayList<>();
-        Object obj = new JSONParser().parse(new FileReader("src/com/JsonObjects/rooms.json"));
+        InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/rooms.json"));
+        Object obj = new JSONParser().parse(isr);
         JSONArray ja = (JSONArray) obj;
         rooms.addAll(ja);
         for (Object ob:
@@ -65,7 +66,8 @@ public class ImportJSON {
         return map;
     }
     public static Collection<Item> getWeapons() throws IOException, ParseException {
-        Object objItems = new JSONParser().parse(new FileReader("src/com/JsonObjects/weapons.json"));
+        InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/weapons.json"));
+        Object objItems = new JSONParser().parse(isr);
         Collection<Object> inventory = new ArrayList<>();
         Collection<Item> weapons = new ArrayList<>();
         JSONArray jaItems = (JSONArray) objItems;
@@ -81,7 +83,8 @@ public class ImportJSON {
         return weapons;
     }
     public static Collection<Item> getArmor() throws IOException, ParseException {
-        Object objItems = new JSONParser().parse(new FileReader("src/com/JsonObjects/armor.json"));
+        InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/armor.json"));
+        Object objItems = new JSONParser().parse(isr);
         Collection<Object> inventory = new ArrayList<>();
         Collection<Item> armor = new ArrayList<>();
         JSONArray jaItems = (JSONArray) objItems;
@@ -96,4 +99,16 @@ public class ImportJSON {
         }
         return armor;
     }
+
+    private static InputStream getFileFromResourceAsStream(String fileName) {
+        ClassLoader classLoader = ImportJSON.class.getClassLoader();
+        InputStream inputStream = classLoader.getResourceAsStream(fileName);
+        if (inputStream == null) {
+            throw new IllegalArgumentException("file not found! " + fileName);
+        } else {
+            return inputStream;
+        }
+    }
 }
+
+

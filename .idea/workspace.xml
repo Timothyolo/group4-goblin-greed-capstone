@@ -13,8 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/group5-goblin-greed.jar" beforeDir="false" afterPath="$PROJECT_DIR$/group5-goblin-greed.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/group5_goblin_greed_jar/group5-goblin-greed.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/group5_goblin_greed_jar/group5-goblin-greed.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
