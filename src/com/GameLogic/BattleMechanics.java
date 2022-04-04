@@ -2,6 +2,8 @@ package com.GameLogic;
 
 import com.Imports.ImportJSON;
 import com.Players.Player;
+import com.Story.Story;
+import com.Utility.Printer;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -19,7 +21,7 @@ public class BattleMechanics {
         System.out.println("You started a battle with: "+enemyFighter.getName());
         Scanner in = new Scanner(System.in);
         while(true) {
-            System.out.println("Type: 'attack' to deal damage, 'run' to escape from battle, 'health' to see current health");
+            System.out.println("Type: 'attack' to deal damage and 'run' to escape from the battle.");
             if ("attack".equalsIgnoreCase(in.nextLine())){
                 player.battle(enemyFighter);
                 enemyFighter.battle(player);
@@ -27,7 +29,7 @@ public class BattleMechanics {
                 if(checkFight(player,enemyFighter) != null) {
                     break;
                 };
-            } else if("run".equalsIgnoreCase(in.nextLine())) {
+            }else if("run".equalsIgnoreCase(in.nextLine())) {
                 break;
             }
         }

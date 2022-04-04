@@ -15,7 +15,12 @@ public class Story {
                 "Type 'LOOK MAP' to look at your map and get a list of available rooms.\n" +
                 "When in a room you can type 'LOOK AROUND' to see the items in the room.\n" +
                 "Then you may type 'GET [item name]' to add that item to your inventory.\n" +
-                "As the player you can also type 'CHECK INVENTORY' to see what you have.";
+                "As the player you can also type 'CHECK INVENTORY' to see what you have.\n" +
+                "Remove items from your inventory by typing 'DROP [item name]'.\n"+
+                "Equip weapon or armor from your inventory by typing 'EQUIP [item name]'.\n"+
+                "Type 'STATS' to see your current status.\n"+
+                "If you see an enemy in the room type 'ATTACK' to start a battle.\n"+
+                "Quit the game at anytime by typing 'QUIT'.";
     }
 
 
