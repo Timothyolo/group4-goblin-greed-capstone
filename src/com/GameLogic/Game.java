@@ -40,9 +40,9 @@ public class Game {
         String name = in.nextLine();
         Player you = new Player(name,100,15);
         Scanner in2 = new Scanner(System.in);
-        System.out.println("Ok, " + you.getName() + " this isn't going to be an easy adventure are you ready?");
+        System.out.println("Ok, " + you.getName() + " this isn't going to be an easy adventure are you ready? (yes/no)");
         String startGame = in2.nextLine();
-        if ("start".equalsIgnoreCase(startGame) || "yes".equalsIgnoreCase(startGame)) {
+        if ("start".equalsIgnoreCase(startGame) || "yes".equalsIgnoreCase(startGame) || "y".equalsIgnoreCase(startGame)) {
             setPlayer(you);
             Player player = getPlayer();
             player.setCurrentRoom(map.get(0));

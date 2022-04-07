@@ -16,6 +16,7 @@ import java.util.Collection;
 
 public class ImportJSON {
 
+    //parses items json
     public static Collection<Item> getItems() throws IOException, ParseException {
         InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/items.json"));
         Object objItems = new JSONParser().parse(isr);
@@ -24,8 +25,7 @@ public class ImportJSON {
         JSONArray jaItems = (JSONArray) objItems;
         inventory.addAll(jaItems);
 
-        for (Object obItems:
-                inventory) {
+        for (Object obItems: inventory) {
             JSONObject inventoryItem = (JSONObject) obItems;
             Item questItem;
             questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"));
@@ -34,6 +34,7 @@ public class ImportJSON {
         return items;
     }
 
+    //parses enemies
     public static Collection<Player> getNpcs() throws IOException, ParseException {
         InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/characterList.json"));
         Object charaobj = new JSONParser().parse(isr);
