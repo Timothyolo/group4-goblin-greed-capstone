@@ -12,7 +12,8 @@ public class Main {
 
             if (startGame) {
                 newGame.playGame(newGame.getPlayer());
-            } else {
+            }
+            else {
                 break;
             }
 
