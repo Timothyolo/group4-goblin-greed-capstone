@@ -1,10 +1,10 @@
 package com.GameLogic;
-import com.Items.Item;
 import com.Players.Player;
 import com.Imports.ImportJSON;
 import com.Rooms.Room;
 import com.Utility.Printer;
 import com.Story.Story;
+import com.Utility.TextParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -14,12 +14,14 @@ import java.util.*;
 // Definition of what is a game
 public class Game {
     private Player player;
+    private TextParser parser;
 
     ArrayList<Room> map = (ArrayList<Room>) ImportJSON.getMap();
 
 
     // Constructor for an instance of the game
     public Game() throws IOException, ParseException {
+        parser = new TextParser();
     }
 
     public Player getPlayer() {
@@ -64,7 +66,13 @@ public class Game {
         Scanner in = new Scanner(System.in);
         Printer.print(Story.promptPlayerMessage());
         String[] location = in.nextLine().split(" ");
-        try {
+        List<String> validCommand = parser.ParseCommand(location);
+        commandProcessor(validCommand, player1);
+        //send String[] location to TextParser to validate command
+        //ImportJSON will parse CommandList - store in ArrayList verbList
+        //TextParser check if location[0] is contained in verbList, then process the noun based on the verb
+
+        /*try {
             if ("quit".equalsIgnoreCase(location[0])) {
                 Printer.print(Story.quitMessage());
                 System.exit(130);
@@ -103,6 +111,69 @@ public class Game {
             } else {
                 Printer.print(Story.invalidEntryMessage2());
                 playGame(player1);
+            }
+        } catch (IndexOutOfBoundsException e) {
+            playGame(player1);
+        }*/
+    }
+
+    public void commandProcessor(List<String> validCommand, Player player1) throws IOException, InterruptedException, ParseException {
+
+        try {
+            if (validCommand.get(0).equals("go")){
+                //move engine
+                PlayerMechanics.moveRoom(validCommand.get(1), this);
+            }
+            else if (validCommand.get(0).equals("get")) {
+                //get engine
+                PlayerMechanics.getItem(validCommand.get(1), player1.getCurrentRoom().getItems(), player1.getItems());
+            }
+            else if (validCommand.get(0).equals("look")) {
+                //look engine
+                if (validCommand.get(1).equals("around")) {
+                    PlayerMechanics.lookAround(this);
+                }
+                else if (validCommand.get(1).equals("map")) {
+                    PlayerMechanics.lookAtMap(this);
+                }
+                else {
+                    PlayerMechanics.lookItem(validCommand.get(1), player1.getCurrentRoom().getItems(),player1.getItems());
+                }
+            }
+            else if (validCommand.get(0).equals("check")) {
+                //Use engine
+                if (validCommand.get(1).equals("inventory")) {
+                    PlayerMechanics.checkInventory(getPlayer());
+                }
+            }
+            else if (validCommand.get(0).equals("quit")) {
+                //quit engine
+                Printer.print(Story.quitMessage());
+                System.exit(130);
+            }
+            else if (validCommand.get(0).equals("help")) {
+                //help engine
+                Printer.print(Story.tutorial());
+            }
+            else if (validCommand.get(0).equals("stats")) {
+                //help engine
+                PlayerMechanics.stats(getPlayer());
+            }
+            else if (validCommand.get(0).equals("attack")) {
+                //help engine
+                BattleMechanics.fight(validCommand.get(1),getPlayer());
+            }
+            else if (validCommand.get(0).equals("drop")) {
+                //help engine
+                PlayerMechanics.dropItem(validCommand.get(1), player1.getCurrentRoom().getItems(), player1.getItems());
+            }
+            else if (validCommand.get(0).equals("equip")) {
+                //help engine
+                if(PlayerMechanics.checkInstance(getPlayer(),validCommand.get(1))) {
+                    PlayerMechanics.equipWeapon(getPlayer(),validCommand.get(1));
+                } else {
+                    PlayerMechanics.equipArmor(getPlayer(),validCommand.get(1));
+                }
             }
         } catch (IndexOutOfBoundsException e) {
             playGame(player1);

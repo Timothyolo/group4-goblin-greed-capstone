@@ -1,4 +1,5 @@
 [
-  {"verb": ["go", "get", "look", "use", "quit", "help", "stats", "attack", "drop", "equip"]}
+  {"verb": ["go", "get", "look", "check", "quit", "help", "stats", "attack", "drop", "equip"]}
+
 ]
 
