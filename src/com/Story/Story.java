@@ -40,7 +40,7 @@ public class Story {
     }
 
     public static String invalidEntryMessage2(){
-        return "Invalid input, your action are 'GO' to a location, 'LOOK' to see what is around, and 'GET' items.";
+        return "Invalid input, your actions should be verbs such as 'GO' to a location, 'LOOK' to see what is around, 'GET' items, or 'ATTACK' monster.";
     }
 
     public static String noRoomMessage(){

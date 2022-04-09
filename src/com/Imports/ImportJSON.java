@@ -13,6 +13,7 @@ import org.json.simple.parser.ParseException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class ImportJSON {
 
@@ -42,8 +43,7 @@ public class ImportJSON {
         Collection<Player> npcs = new ArrayList<>();
         JSONArray ch = (JSONArray) charaobj;
         charjson.addAll(ch);
-        for (Object cha: charjson
-        ) {
+        for (Object cha: charjson) {
             JSONObject character = (JSONObject) cha;
             Player npc = new Player((String) character.get("name"), (Long) character.get("hp"), (Long) character.get("attack"));
             npcs.add(npc);
@@ -99,6 +99,19 @@ public class ImportJSON {
             armor.add(questItem);
         }
         return armor;
+    }
+
+    public static Collection<String> commandParser() throws IOException, ParseException {
+        InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/CommandList.json"));
+        Object obj = new JSONParser().parse(isr);
+
+        ArrayList<String> verbList;
+        JSONArray jaCommands = (JSONArray) obj;
+        JSONObject commJson = (JSONObject) jaCommands.get(0);
+
+        verbList = (ArrayList<String>) commJson.get("verb");
+        
+        return verbList;
     }
 
     private static InputStream getFileFromResourceAsStream(String fileName) {
