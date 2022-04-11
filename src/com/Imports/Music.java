@@ -1,4 +1,3 @@
-//Music file was created
 package com.Imports;
 import javax.sound.sampled.*;
 import java.io.File;
