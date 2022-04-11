@@ -10,15 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6f596e-3047-4150-9fb0-0799964967fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/Utility/TextParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/Imports/Music.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/JsonObjects/group4.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/CommandList.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/CommandList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/CommandList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/CommandList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Story/Story.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Story/Story.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +50,30 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/JsonObjects" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\timol\TLG\group4-goblin-greed-capstone\src\com\JsonObjects" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.Utility" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Music">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="group5-goblin-greed" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Music" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Imports.Music" />
+      <module name="group5-goblin-greed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Imports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,10 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Music" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.group5-goblin-greed.jar" />
         <item itemvalue="Application.MyGui" />
         <item itemvalue="Application.gui" />
-        <item itemvalue="JAR Application.group5-goblin-greed.jar" />
       </list>
     </recent_temporary>
   </component>
