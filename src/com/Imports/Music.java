@@ -9,6 +9,7 @@ public class Music {
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         Scanner scanner = new Scanner(System.in);
         File file = new File("src/com/JsonObjects/group4.wav");
+        //Music path
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File("src/com/JsonObjects/group4.wav"));
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);
