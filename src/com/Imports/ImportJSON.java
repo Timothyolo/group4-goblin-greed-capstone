@@ -14,6 +14,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 public class ImportJSON {
 
@@ -101,16 +102,37 @@ public class ImportJSON {
         return armor;
     }
 
-    public static Collection<String> commandParser() throws IOException, ParseException {
+    public static Collection<Map> commandParser() throws IOException, ParseException {
         InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/CommandList.json"));
         Object obj = new JSONParser().parse(isr);
 
-        ArrayList<String> verbList;
+        List<Map> verbList = new ArrayList<>();
+        /*ArrayList<String> verbList;
+        ArrayList<String> goSynList;
+        ArrayList<String> getSynList;
+        ArrayList<String> lookSynList;
+        ArrayList<String> checkSynList;
+        ArrayList<String> attackSynList;*/
         JSONArray jaCommands = (JSONArray) obj;
-        JSONObject commJson = (JSONObject) jaCommands.get(0);
 
-        verbList = (ArrayList<String>) commJson.get("verb");
-        
+        /*JSONObject verbJson = (JSONObject) jaCommands.get(0);
+        JSONObject goJson = (JSONObject) jaCommands.get(1);
+        JSONObject getJson = (JSONObject) jaCommands.get(2);
+        JSONObject lookJson = (JSONObject) jaCommands.get(3);
+        JSONObject checkJson = (JSONObject) jaCommands.get(4);
+        JSONObject attackJson = (JSONObject) jaCommands.get(5);*/
+
+        for (Object o : jaCommands) {
+            verbList.add((Map) o);
+        }
+
+        /*verbList = (ArrayList<String>) verbJson.get("verb");
+        goSynList = (ArrayList<String>) goJson.get("synonyms-go");
+        getSynList = (ArrayList<String>) getJson.get("synonyms-get");
+        lookSynList = (ArrayList<String>) lookJson.get("synonyms-look");
+        checkSynList = (ArrayList<String>) checkJson.get("synonyms-check");
+        attackSynList = (ArrayList<String>) attackJson.get("synonyms-attack");*/
+
         return verbList;
     }
 

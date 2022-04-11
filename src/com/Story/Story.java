@@ -18,7 +18,7 @@ public class Story {
                 "As the player you can also type 'CHECK INVENTORY' to see what you have.\n" +
                 "Remove items from your inventory by typing 'DROP [item name]'.\n"+
                 "Equip weapon or armor from your inventory by typing 'EQUIP [item name]'.\n"+
-                "Type 'STATS' to see your current status.\n"+
+                "Type 'LOOK STATS' to see your current status.\n"+
                 "If you see an enemy in the room type 'ATTACK' to start a battle.\n"+
                 "Quit the game at anytime by typing 'QUIT'.";
     }

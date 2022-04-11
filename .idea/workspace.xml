@@ -10,7 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6f596e-3047-4150-9fb0-0799964967fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/Imports/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/CommandList.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/CommandList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Utility/TextParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Utility/TextParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/CommandList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/CommandList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Story/Story.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Story/Story.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Utility/TextParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Utility/TextParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +63,7 @@
       <recent name="com.Utility" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Music">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="group5-goblin-greed" />
@@ -107,8 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Music" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Music" />
         <item itemvalue="JAR Application.group5-goblin-greed.jar" />
         <item itemvalue="Application.MyGui" />
         <item itemvalue="Application.gui" />

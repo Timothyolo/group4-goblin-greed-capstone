@@ -136,14 +136,15 @@ public class Game {
                 else if (validCommand.get(1).equals("map")) {
                     PlayerMechanics.lookAtMap(this);
                 }
+                else if (validCommand.get(1).equals("inventory")) {
+                    PlayerMechanics.checkInventory(getPlayer());
+                }
+                else if (validCommand.get(1).equals("stats")) {
+                    //help engine
+                    PlayerMechanics.stats(getPlayer());
+                }
                 else {
                     PlayerMechanics.lookItem(validCommand.get(1), player1.getCurrentRoom().getItems(),player1.getItems());
-                }
-            }
-            else if (validCommand.get(0).equals("check")) {
-                //Use engine
-                if (validCommand.get(1).equals("inventory")) {
-                    PlayerMechanics.checkInventory(getPlayer());
                 }
             }
             else if (validCommand.get(0).equals("quit")) {
@@ -154,10 +155,6 @@ public class Game {
             else if (validCommand.get(0).equals("help")) {
                 //help engine
                 Printer.print(Story.tutorial());
-            }
-            else if (validCommand.get(0).equals("stats")) {
-                //help engine
-                PlayerMechanics.stats(getPlayer());
             }
             else if (validCommand.get(0).equals("attack")) {
                 //help engine
