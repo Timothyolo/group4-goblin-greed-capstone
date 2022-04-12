@@ -189,4 +189,20 @@ public class Game {
         }
     }
 
+
+    public void commandProcessor() {
+    }
+
+    public void look() {
+    }
+
+    public void detailedLook() {
+    }
+
+    public String runCommand(String input) {
+        return input;
+    }
+
+    public void showStr(String output) {
+    }
 }
