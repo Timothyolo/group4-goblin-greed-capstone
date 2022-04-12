@@ -10,9 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6f596e-3047-4150-9fb0-0799964967fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/Imports/SaveGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/JsonObjects/save.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,7 @@
       <recent name="com.Utility" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyGui">
+  <component name="RunManager" selected="Application.SaveGame">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="group5-goblin-greed" />
@@ -90,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WorkingFiles.gui" />
+    <configuration name="SaveGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Imports.SaveGame" />
       <module name="group5-goblin-greed" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="WorkingFiles.*" />
+          <option name="PATTERN" value="com.Imports.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyGui" />
+        <item itemvalue="Application.SaveGame" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MyGui" />
         <item itemvalue="Application.Music" />
         <item itemvalue="JAR Application.group5-goblin-greed.jar" />
-        <item itemvalue="Application.gui" />
       </list>
     </recent_temporary>
   </component>
