@@ -1,7 +1,12 @@
 package WorkingFiles;
 
+import com.Story.Story;
+import com.Utility.Printer;
+
 import javax.swing.*;
 import java.awt.*;
+
+import static com.Utility.Printer.print;
 
 public class MyGui {
 
@@ -17,6 +22,7 @@ public class MyGui {
         JButton playButton = new JButton("Play");
         JButton infoButton = new JButton("More Info");
 
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
         cp.setBackground(Color.GRAY);
@@ -28,7 +34,7 @@ public class MyGui {
         buttonPanel.setBounds(300, 400, 200, 100);
         playButton.setBackground(Color.GREEN);
         infoButton.setBackground(Color.GREEN);
-
+        infoButton.addActionListener(e -> JOptionPane.showMessageDialog(frame, Story.tutorial()));
 
         titlePanel.add(gameTitle);
         buttonPanel.add(playButton);
@@ -38,10 +44,8 @@ public class MyGui {
         frame.add(titlePanel);
 
 
-
         frame.setVisible(true);
-
-
+        
 
     }
 
