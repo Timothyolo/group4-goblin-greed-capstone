@@ -96,6 +96,10 @@ public class PlayerMechanics {
         System.out.println("Name: "+player.getName());
         System.out.println("HP: "+player.getHp());
         System.out.println("Attack Power: "+ player.getAttack());
+        System.out.println("Inventory: ");
+        for (Item item: player.getItems()) {
+            System.out.println(item.getName());
+        }
         if (player.getEquippedWeapon() != null) {
             System.out.println("Equipped Weapon: " + player.getEquippedWeapon().getName());
         } else {

@@ -158,7 +158,19 @@ public class Game {
             }
             else if (validCommand.get(0).equals("attack")) {
                 //help engine
-                BattleMechanics.fight(validCommand.get(1),getPlayer());
+                //check player's room if monster is available
+                try {
+                    String enemy = player1.getCurrentRoom().getEnemy().getName().toLowerCase();
+                    if (validCommand.get(1).equals(enemy)){
+                        BattleMechanics.fight(validCommand.get(1), getPlayer());
+                    }
+                    else {
+                        Printer.print(Story.invalidEntryMessage2());
+                    }
+                } catch (NullPointerException e) {
+                    Printer.print(Story.invalidEntryMessage2());
+                }
+
             }
             else if (validCommand.get(0).equals("drop")) {
                 //help engine

@@ -22,14 +22,14 @@ public class BattleMechanics {
         Scanner in = new Scanner(System.in);
         while(true) {
             System.out.println("Type: 'attack' to deal damage and 'run' to escape from the battle.");
-            if ("attack".equalsIgnoreCase(in.nextLine())){
+            if ("attack".equalsIgnoreCase(in.nextLine().strip())){
                 player.battle(enemyFighter);
                 enemyFighter.battle(player);
                 System.out.println("Enemy HP is now: "+ enemyFighter.getHp());
                 if(checkFight(player,enemyFighter) != null) {
                     break;
                 };
-            }else if("run".equalsIgnoreCase(in.nextLine())) {
+            }else if("run".equalsIgnoreCase(in.nextLine().strip())) {
                 break;
             }
         }
