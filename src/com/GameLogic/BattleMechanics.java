@@ -21,7 +21,7 @@ public class BattleMechanics {
         System.out.println("You started a battle with: "+enemyFighter.getName());
         Scanner in = new Scanner(System.in);
         while(true) {
-            System.out.println("Type: 'attack' to deal damage and 'run' to escape from the battle.");
+            System.out.println("Type: 'attack' to deal damage or 'run' to escape from the battle.");
             if ("attack".equalsIgnoreCase(in.nextLine().strip())){
                 player.battle(enemyFighter);
                 enemyFighter.battle(player);
@@ -29,10 +29,17 @@ public class BattleMechanics {
                 if(checkFight(player,enemyFighter) != null) {
                     break;
                 };
-            }else if("run".equalsIgnoreCase(in.nextLine().strip())) {
+                //Fix the run button(need to optimize)
+            }else {
+                System.out.println("you are running away");
                 break;
+
             }
         }
+//     possible bug cause 1: not closing scanner?   in.close();
+        //if("run".equalsIgnoreCase(in.nextLine()))
+
+
     }
 
     public static List<Player> checkFight(Player player,Player enemy) throws IOException, ParseException {
