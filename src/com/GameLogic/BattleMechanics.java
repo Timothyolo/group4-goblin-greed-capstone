@@ -22,19 +22,34 @@ public class BattleMechanics {
         Scanner in = new Scanner(System.in);
         while(true) {
             System.out.println("Type: 'attack' to deal damage or 'run' to escape from the battle.");
-            if ("attack".equalsIgnoreCase(in.nextLine().strip())){
+            String input = in.nextLine().strip();
+            if(input.equalsIgnoreCase("attack")){
                 player.battle(enemyFighter);
                 enemyFighter.battle(player);
                 System.out.println("Enemy HP is now: "+ enemyFighter.getHp());
                 if(checkFight(player,enemyFighter) != null) {
                     break;
-                };
-                //Fix the run button(need to optimize)
-            }else {
+                }
+            }
+            else if(input.equalsIgnoreCase("run")){
                 System.out.println("you are running away");
                 break;
-
             }
+
+
+//            if ("attack".equalsIgnoreCase(in.nextLine().strip())){
+//                player.battle(enemyFighter);
+//                enemyFighter.battle(player);
+//                System.out.println("Enemy HP is now: "+ enemyFighter.getHp());
+//                if(checkFight(player,enemyFighter) != null) {
+//                    break;
+//                };
+//                //Fix the run button(need to optimize)
+//            }else {
+//                System.out.println("you are running away");
+//                break;
+//
+//            }
         }
 //     possible bug cause 1: not closing scanner?   in.close();
         //if("run".equalsIgnoreCase(in.nextLine()))
