@@ -11,7 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6c6f596e-3047-4150-9fb0-0799964967fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Imports/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/Music.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/group4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Imports/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/music/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/group4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/music/group4.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,7 @@
       <recent name="$PROJECT_DIR$/src/com/JsonObjects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\timol\TLG\group4-goblin-greed-capstone\src\com\music" />
       <recent name="C:\Users\timol\TLG\group4-goblin-greed-capstone\src\com\JsonObjects" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -64,11 +68,11 @@
       </method>
     </configuration>
     <configuration name="Music" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Imports.Music" />
+      <option name="MAIN_CLASS_NAME" value="com.music.Music" />
       <module name="group5-goblin-greed" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Imports.*" />
+          <option name="PATTERN" value="com.music.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,7 +98,7 @@
       <module name="group5-goblin-greed" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Imports.*" />
+          <option name="PATTERN" value="com.music.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
