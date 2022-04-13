@@ -23,6 +23,8 @@ public class MyGui {
     JLabel gameTitle;
     JButton playButton;
     JButton infoButton;
+
+
     JPanel topPanel;
     JPanel centerPanel;
     JPanel bottomPanel;
@@ -40,7 +42,7 @@ public class MyGui {
         new MyGui();
     }*/
 
-    public MyGui() throws IOException, ParseException {
+    public MyGui() {
 
         //newGame = new Game();
         frame = new JFrame("Goblin's Greed");
@@ -51,8 +53,9 @@ public class MyGui {
         gameTitle = new JLabel("Goblin's Greed");
         playButton = new JButton("Play");
         infoButton = new JButton("More Info");
+
         newline = "\n";
-        mainTextArea = new JTextArea("This is the main text area. ");
+        mainTextArea = new JTextArea();
         //StartGameHandler sgHandler = new StartGameHandler();
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -103,9 +106,10 @@ public class MyGui {
             //JLabel sample = new JLabel("Goblin's Greed");
             //mainTextArea = new JTextArea("This is the main text area. ");
             //mainTextArea.setBackground(Color.white);
-            //mainTextArea.setLineWrap(true);
-            //mainTextArea.setWrapStyleWord(true);
+            mainTextArea.setLineWrap(true);
+            mainTextArea.setWrapStyleWord(true);
             mainTextArea.setEditable(false);
+            mainTextArea.setBounds(100, 100, 600, 400);
             bottomTf.addActionListener(itHandler);
 
 
