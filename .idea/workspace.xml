@@ -11,13 +11,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$InputTextHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$InputTextHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$StartGameHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$StartGameHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/BattleMechanics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/BattleMechanics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/BattleMechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/BattleMechanics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Players/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
