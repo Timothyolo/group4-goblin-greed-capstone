@@ -1,4 +1,5 @@
 package com.GameLogic;
+import WorkingFiles.MyGui;
 import com.Players.Player;
 import com.Imports.ImportJSON;
 import com.Rooms.Room;
@@ -15,12 +16,14 @@ import java.util.*;
 public class Game {
     private Player player;
     private TextParser parser;
+    private MyGui gui;
 
     ArrayList<Room> map = (ArrayList<Room>) ImportJSON.getMap();
 
 
     // Constructor for an instance of the game
     public Game() throws IOException, ParseException {
+        gui = new MyGui();
         parser = new TextParser();
     }
 
@@ -36,7 +39,7 @@ public class Game {
 
 
     // Method for creating a game
-    public boolean beginGame() throws IOException, InterruptedException {
+    /*public boolean beginGame() throws IOException, InterruptedException {
         Scanner in = new Scanner(System.in);
         Printer.print(Story.beginGameText());
         String name = in.nextLine();
@@ -55,6 +58,30 @@ public class Game {
             return false;
         }
 
+    }*/
+
+    //gui version
+    public boolean beginGame() throws IOException, InterruptedException {
+        Printer.print(Story.beginGameText());
+
+        //String name = MyGui.InputTextHandler;
+        Player you = new Player("Test",100,15);
+
+        //Scanner in2 = new Scanner(System.in);
+        //System.out.println("Ok, " + you.getName() + " this isn't going to be an easy adventure are you ready? (yes/no)");
+        //String startGame = in2.nextLine();
+        //if ("start".equalsIgnoreCase(startGame) || "yes".equalsIgnoreCase(startGame) || "y".equalsIgnoreCase(startGame)) {
+            setPlayer(you);
+            Player player = getPlayer();
+            player.setCurrentRoom(map.get(0));
+            System.out.println(getPlayer());
+            gui.outputTextArea(player.toString());
+            return true;
+        //}
+        //else {
+        //    return false;
+        //}
+
     }
 
     //Method for running the game
@@ -62,9 +89,16 @@ public class Game {
     public void playGame(Player player1) throws IOException, ParseException, InterruptedException {
         player1.setItems(player1.getItems());
         System.out.println("\n" + player1.getName() + " is at the " + player1.getCurrentRoom().getName());
+        gui.outputTextArea(player1.getName() + " is at the " + player1.getCurrentRoom().getName());
+
         System.out.println(player1.getCurrentRoom().getDesc());
+        gui.outputTextArea(player1.getCurrentRoom().getDesc());
+
         Scanner in = new Scanner(System.in);
+
         Printer.print(Story.promptPlayerMessage());
+        gui.outputTextArea(Story.promptPlayerMessage());
+
         String[] location = in.nextLine().split(" ");
         List<String> validCommand = parser.ParseCommand(location);
         commandProcessor(validCommand, player1);

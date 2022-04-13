@@ -32,7 +32,7 @@ public class BattleMechanics {
                 }
             }
             else if(input.equalsIgnoreCase("run")){
-                System.out.println("you are running away");
+                System.out.println("You are running away");
                 break;
             }
 
