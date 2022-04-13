@@ -1,4 +1,4 @@
-package com.Imports;
+package com.music;
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
@@ -8,9 +8,9 @@ import java.util.Scanner;
 public class Music {
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         Scanner scanner = new Scanner(System.in);
-        File file = new File("src/com/JsonObjects/group4.wav");
+        File file = new File("src/com/music/group4.wav");
         //Music path
-        AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File("src/com/JsonObjects/group4.wav"));
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File("src/com/music/group4.wav"));
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);
 
