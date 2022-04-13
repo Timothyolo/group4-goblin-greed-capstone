@@ -14,33 +14,32 @@ public class Music {
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);
 
-        clip.start();
 
-        String response = scanner.next();
-
+        String response = "";
 
 
+        while (!response.equals("Q")) {
+            System.out.println("P = play, S = stop, Q = Quit");
+            System.out.println("Enter your choice: ");
 
-       /*
-       String response ="";
-       while(!response.equals("Q"));
-        System.out.println("P = play, S = Stop");
-        System.out.println("enter your choice of option");
+            response = scanner.next();
+            response = response.toUpperCase();
 
-        response = scanner.next();
-        response = response.toUpperCase();
+            switch (response) {
+                case ("P"):
+                    clip.start();
+                    break;
+                case ("S"):
+                    clip.stop();
+                    break;
+                case ("Q"):
+                    clip.close();
+                    break;
+                default:
+                    System.out.println("Invalid input");
 
-
-
-        switch (response){
-            case ("p"): clip.start();
-                break;
-            default: System.out.println("Not a valid response");
-        }  */
-
-
-
-
+            }
+        }
 
     }
 }

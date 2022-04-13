@@ -10,7 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6f596e-3047-4150-9fb0-0799964967fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/Imports/SaveGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/SaveGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Imports/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/Music.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
       <recent name="com.Utility" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SaveGame">
+  <component name="RunManager" selected="Application.Music">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="group5-goblin-greed" />
@@ -107,10 +108,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Music" />
         <item itemvalue="Application.SaveGame" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MyGui" />
-        <item itemvalue="Application.Music" />
         <item itemvalue="JAR Application.group5-goblin-greed.jar" />
       </list>
     </recent_temporary>
