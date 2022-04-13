@@ -1,5 +1,6 @@
 package com.Utility;
 
+import WorkingFiles.MyGui;
 import com.Imports.ImportJSON;
 import com.Story.Story;
 import org.json.simple.JSONArray;
@@ -80,8 +81,8 @@ public class TextParser {
                 validCommand.add(noun);
             }
             else{
-                //System.out.println(verb + " " + noun + " is not a valid action");
                 Printer.print(Story.invalidEntryMessage2());
+                //MyGui.outputTextArea(Story.invalidEntryMessage2());
             }
         }
         return validCommand;

@@ -14,5 +14,9 @@ public class Printer {
         System.out.println(text);
     }
 
+    public static String printJText(String text) {
+        return text;
+    }
+
 
 }
