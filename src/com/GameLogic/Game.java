@@ -184,11 +184,15 @@ public class Game {
             else if (validCommand.get(0).equals("quit")) {
                 //quit engine
                 Printer.print(Story.quitMessage());
+                MyGui.outputTextArea(Story.quitMessage());
+
                 System.exit(130);
             }
             else if (validCommand.get(0).equals("help")) {
                 //help engine
                 Printer.print(Story.tutorial());
+                MyGui.outputTextArea(Story.tutorial());
+
             }
             else if (validCommand.get(0).equals("attack")) {
                 //help engine
@@ -200,9 +204,13 @@ public class Game {
                     }
                     else {
                         Printer.print(Story.invalidEntryMessage2());
+                        MyGui.outputTextArea(Story.invalidEntryMessage2());
+
                     }
                 } catch (NullPointerException e) {
                     Printer.print(Story.invalidEntryMessage2());
+                    MyGui.outputTextArea(Story.invalidEntryMessage2());
+
                 }
 
             }
