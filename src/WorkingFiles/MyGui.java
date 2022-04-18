@@ -18,7 +18,7 @@ import java.util.List;
 public class MyGui {
 
     //TextParser parser;
-    Game newGame = new Game();
+    Game newGame;
     JFrame frame;
     Container cp;
     Font titleFont;
@@ -35,7 +35,7 @@ public class MyGui {
     static JTextField bottomTf;
     static JTextArea mainTextArea;
     JButton audioOnButton;
-    JButton audioOffButton;
+
     static Clip clip;
 
     JScrollPane scroll;
@@ -58,6 +58,7 @@ public class MyGui {
     public MyGui() throws IOException, ParseException {
 
         //parser = new TextParser();
+        newGame = new Game();
         frame = new JFrame("Goblin's Greed");
         cp = frame.getContentPane();
         titleFont = new Font("Times New Roman", Font.PLAIN, 90);
@@ -121,8 +122,8 @@ public class MyGui {
             bottomPanel = new JPanel();
             bottomTextLabel = new JLabel("Enter your command here: ");
             bottomTf = new JTextField(30);
-            audioOnButton = new JButton("Sound On");
-            audioOffButton = new JButton("Sound Off");
+            audioOnButton = new JButton("Sound");
+
 
             //JLabel sample = new JLabel("Goblin's Greed");
             //mainTextArea = new JTextArea("This is the main text area. ");
@@ -136,14 +137,14 @@ public class MyGui {
 
             bottomTf.addActionListener(itHandler);
             audioOnButton.addActionListener(soundHandler);
-            audioOffButton.addActionListener(soundHandler);
+
 
             //centerPanel.add(mainTextArea);
             centerPanel.add(scroll);
             bottomPanel.add(bottomTextLabel);
             bottomPanel.add(bottomTf);
             bottomPanel.add(audioOnButton);
-            bottomPanel.add(audioOffButton);
+
 
             //frame.add(scroll);
             cp.add(BorderLayout.NORTH, topPanel);
@@ -159,38 +160,46 @@ public class MyGui {
     public class SoundHandler implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(e.getSource() == audioOnButton) {
 
+            try {
+                JButton b=(JButton) e.getSource();
+                // play the sound clip
+                if(b.getText().equals("Sound")){
+                    b.setText("Stop");
+                    btnPlaySoundCLick();
+                } else if(b.getText().equals("Stop")) {
+                    b.setText("Sound");
+                    clip.stop();
+                }
+            } catch (LineUnavailableException | IOException
+                    | UnsupportedAudioFileException ex) {
 
-                File song = new File("src/com/music/group4.wav");
-                AudioInputStream audioStream = null;
-                try {
-                    audioStream = AudioSystem.getAudioInputStream(song);
-                } catch (UnsupportedAudioFileException | IOException ex) {
-                    ex.printStackTrace();
-                }
-
-                try {
-                    clip = AudioSystem.getClip();
-                } catch (LineUnavailableException ex) {
-                    ex.printStackTrace();
-                }
-                try {
-                    clip.open(audioStream);
-                } catch (LineUnavailableException | IOException ex) {
-                    ex.printStackTrace();
-                }
-                clip.start();
-                clip.loop(Clip.LOOP_CONTINUOUSLY);
-                //clip.getControls();
-                //clip.flush();
-            }else  if(e.getSource() == audioOffButton){
-                clip.close();
-                clip.stop();
+                ex.printStackTrace();
             }
-
         }
 
+
+    }
+
+    private void btnPlaySoundCLick() throws LineUnavailableException, IOException, UnsupportedAudioFileException{
+
+        File soundFile = new File("src/com/music/group4.wav");
+        AudioInputStream sound = AudioSystem.getAudioInputStream(soundFile);
+
+        DataLine.Info info = new DataLine.Info(Clip.class, sound.getFormat());
+        clip = (Clip) AudioSystem.getLine(info);
+        clip.open(sound);
+
+        clip.addLineListener(new LineListener() {
+            public void update(LineEvent event) {
+                if (event.getType() == LineEvent.Type.STOP) {
+                    System.out.println("stop");
+                    event.getLine().close();
+                }
+            }
+        });
+
+        clip.start();
 
     }
 
