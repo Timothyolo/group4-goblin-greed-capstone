@@ -107,32 +107,6 @@ public class Game {
             //return true;
     }
 
-    /*public void beginGame2() {
-        if (continueGame) {
-
-            System.out.println("Something");
-            String name = text;
-            Player you = new Player(name, 100, 15);
-
-            //Scanner in2 = new Scanner(System.in);
-            //System.out.println("Ok, " + you.getName() + " this isn't going to be an easy adventure are you ready? (yes/no)");
-            //String startGame = in2.nextLine();
-            //if ("start".equalsIgnoreCase(startGame) || "yes".equalsIgnoreCase(startGame) || "y".equalsIgnoreCase(startGame)) {
-            setPlayer(you);
-            Player player = getPlayer();
-            player.setCurrentRoom(map.get(0));
-            System.out.println(getPlayer());
-            MyGui.outputTextArea(player.toString());
-
-            //continueGame = true;
-            //continuePlayGame = true;
-            //while (continueGame) {
-            playGame(player);
-
-            //}
-            //continueGame = false
-        }
-    }*/
 
     //Method for running the game
     public void playGame(Player player1) throws IOException, ParseException, InterruptedException {

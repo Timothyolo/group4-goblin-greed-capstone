@@ -18,6 +18,7 @@ import java.util.List;
 public class MyGui {
 
     //TextParser parser;
+    Game newGame = new Game();
     JFrame frame;
     Container cp;
     Font titleFont;
@@ -33,11 +34,14 @@ public class MyGui {
     JLabel bottomTextLabel;
     static JTextField bottomTf;
     static JTextArea mainTextArea;
-    JButton soundButton;
+    JButton audioOnButton;
+    JButton audioOffButton;
+    static Clip clip;
+
     JScrollPane scroll;
 
     static String newline;
-    boolean soundCheck;
+
 
     StartGameHandler sgHandler = new StartGameHandler();
     InputTextHandler itHandler = new InputTextHandler();
@@ -64,7 +68,8 @@ public class MyGui {
         infoButton = new JButton("More Info");
 
         newline = "\n";
-        soundCheck = false;
+        clip = null;
+
         mainTextArea = new JTextArea();
         //scroll = new JScrollPane (mainTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         //StartGameHandler sgHandler = new StartGameHandler();
@@ -91,21 +96,6 @@ public class MyGui {
 
         frame.setVisible(true);
 
-        /*new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Game newGame = new Game();
-                    newGame.beginGame();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();*/
 
     }
 
@@ -131,7 +121,8 @@ public class MyGui {
             bottomPanel = new JPanel();
             bottomTextLabel = new JLabel("Enter your command here: ");
             bottomTf = new JTextField(30);
-            soundButton = new JButton("Sound");
+            audioOnButton = new JButton("Sound On");
+            audioOffButton = new JButton("Sound Off");
 
             //JLabel sample = new JLabel("Goblin's Greed");
             //mainTextArea = new JTextArea("This is the main text area. ");
@@ -144,14 +135,15 @@ public class MyGui {
             scroll.setPreferredSize(new Dimension(600, 400));
 
             bottomTf.addActionListener(itHandler);
-            soundButton.addActionListener(soundHandler);
-
+            audioOnButton.addActionListener(soundHandler);
+            audioOffButton.addActionListener(soundHandler);
 
             //centerPanel.add(mainTextArea);
             centerPanel.add(scroll);
             bottomPanel.add(bottomTextLabel);
             bottomPanel.add(bottomTf);
-            bottomPanel.add(soundButton);
+            bottomPanel.add(audioOnButton);
+            bottomPanel.add(audioOffButton);
 
             //frame.add(scroll);
             cp.add(BorderLayout.NORTH, topPanel);
@@ -167,44 +159,40 @@ public class MyGui {
     public class SoundHandler implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
+            if(e.getSource() == audioOnButton) {
 
-            File file = new File("src/com/music/group4.wav");
-            //Music path
-            AudioInputStream audioStream = null;
-            try {
-                audioStream = AudioSystem.getAudioInputStream(new File("src/com/music/group4.wav"));
-            } catch (UnsupportedAudioFileException ex) {
-                ex.printStackTrace();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-            Clip clip = null;
-            try {
-                clip = AudioSystem.getClip();
-            } catch (LineUnavailableException ex) {
-                ex.printStackTrace();
-            }
 
-            if (soundCheck == false) {
+                File song = new File("src/com/music/group4.wav");
+                AudioInputStream audioStream = null;
+                try {
+                    audioStream = AudioSystem.getAudioInputStream(song);
+                } catch (UnsupportedAudioFileException | IOException ex) {
+                    ex.printStackTrace();
+                }
 
                 try {
-                    clip.open(audioStream);
+                    clip = AudioSystem.getClip();
                 } catch (LineUnavailableException ex) {
                     ex.printStackTrace();
-                } catch (IOException ex) {
+                }
+                try {
+                    clip.open(audioStream);
+                } catch (LineUnavailableException | IOException ex) {
                     ex.printStackTrace();
                 }
                 clip.start();
-
-                soundCheck = true;
-            } else {
+                clip.loop(Clip.LOOP_CONTINUOUSLY);
+                //clip.getControls();
+                //clip.flush();
+            }else  if(e.getSource() == audioOffButton){
+                clip.close();
                 clip.stop();
-                soundCheck = false;
             }
+
         }
+
+
     }
-
-
 
     /**
      * Event handler for JTextField
