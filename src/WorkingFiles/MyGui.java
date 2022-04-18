@@ -3,16 +3,21 @@ package WorkingFiles;
 import com.GameLogic.Game;
 import com.Story.Story;
 import com.Utility.Printer;
+import com.Utility.TextParser;
 import org.json.simple.parser.ParseException;
 
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class MyGui {
 
+    //TextParser parser;
     JFrame frame;
     Container cp;
     Font titleFont;
@@ -28,13 +33,15 @@ public class MyGui {
     JLabel bottomTextLabel;
     static JTextField bottomTf;
     static JTextArea mainTextArea;
+    JButton soundButton;
     JScrollPane scroll;
 
     static String newline;
+    boolean soundCheck;
 
     StartGameHandler sgHandler = new StartGameHandler();
     InputTextHandler itHandler = new InputTextHandler();
-
+    SoundHandler soundHandler = new SoundHandler();
 
     /*public static void main(String[] args) throws IOException, ParseException {
 
@@ -44,9 +51,9 @@ public class MyGui {
     /**
      * Initial GUI screen with game title, and two buttons - Play and More Info
      */
-    public MyGui() {
+    public MyGui() throws IOException, ParseException {
 
-        //newGame = new Game();
+        //parser = new TextParser();
         frame = new JFrame("Goblin's Greed");
         cp = frame.getContentPane();
         titleFont = new Font("Times New Roman", Font.PLAIN, 90);
@@ -57,6 +64,7 @@ public class MyGui {
         infoButton = new JButton("More Info");
 
         newline = "\n";
+        soundCheck = false;
         mainTextArea = new JTextArea();
         //scroll = new JScrollPane (mainTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         //StartGameHandler sgHandler = new StartGameHandler();
@@ -82,7 +90,22 @@ public class MyGui {
         //frame.add(scroll);
 
         frame.setVisible(true);
-        
+
+        /*new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Game newGame = new Game();
+                    newGame.beginGame();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();*/
 
     }
 
@@ -108,6 +131,7 @@ public class MyGui {
             bottomPanel = new JPanel();
             bottomTextLabel = new JLabel("Enter your command here: ");
             bottomTf = new JTextField(30);
+            soundButton = new JButton("Sound");
 
             //JLabel sample = new JLabel("Goblin's Greed");
             //mainTextArea = new JTextArea("This is the main text area. ");
@@ -120,12 +144,14 @@ public class MyGui {
             scroll.setPreferredSize(new Dimension(600, 400));
 
             bottomTf.addActionListener(itHandler);
+            soundButton.addActionListener(soundHandler);
 
 
             //centerPanel.add(mainTextArea);
             centerPanel.add(scroll);
             bottomPanel.add(bottomTextLabel);
             bottomPanel.add(bottomTf);
+            bottomPanel.add(soundButton);
 
             //frame.add(scroll);
             cp.add(BorderLayout.NORTH, topPanel);
@@ -138,6 +164,48 @@ public class MyGui {
 
     }
 
+    public class SoundHandler implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            File file = new File("src/com/music/group4.wav");
+            //Music path
+            AudioInputStream audioStream = null;
+            try {
+                audioStream = AudioSystem.getAudioInputStream(new File("src/com/music/group4.wav"));
+            } catch (UnsupportedAudioFileException ex) {
+                ex.printStackTrace();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+            Clip clip = null;
+            try {
+                clip = AudioSystem.getClip();
+            } catch (LineUnavailableException ex) {
+                ex.printStackTrace();
+            }
+
+            if (soundCheck == false) {
+
+                try {
+                    clip.open(audioStream);
+                } catch (LineUnavailableException ex) {
+                    ex.printStackTrace();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+                clip.start();
+
+                soundCheck = true;
+            } else {
+                clip.stop();
+                soundCheck = false;
+            }
+        }
+    }
+
+
+
     /**
      * Event handler for JTextField
      */
@@ -149,12 +217,18 @@ public class MyGui {
             /*String text = mainTextArea.getText();
             mainTextArea.append(text + newline);
             mainTextArea.selectAll();*/
-            if(e.getSource() == bottomTf){
+            outputTextArea(bottomTf.getText());
+            //if(e.getSource() == bottomTf){
                 String str = bottomTf.getText();
-                if(!str.equals("")){
+                //String[] input = bottomTf.getText().split(" ");
+                Game.storeText(str);
+                //Game.storeText(str);
+                /*if(!str.equals("")){
                     //commandHandler.handle(str);
-                }
-            }
+                }*/
+            bottomTf.setText("");
+            //bottomTf.requestFocusInWindow();
+            //}
         }
     }
 

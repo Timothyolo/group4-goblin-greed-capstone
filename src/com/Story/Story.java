@@ -5,7 +5,7 @@ import com.Art.ASCII_Art;
 public class Story {
 
     public static String beginGameText(){
-        return ASCII_Art.title_screen_image() + "\nWelcome to Goblin's Greed great warrior! What is your name: ";
+        return "\nWelcome to Goblin's Greed great warrior! What is your name: ";
     }
 
 
