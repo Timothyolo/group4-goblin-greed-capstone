@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="group5-goblin-greed:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0fe5e684-07eb-4075-a17d-8c76024cd27b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$StartGameHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$InputTextHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$InputTextHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$StartGameHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$StartGameHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/BattleMechanics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/BattleMechanics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Utility/Printer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Utility/Printer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Utility/TextParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Utility/TextParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/BattleMechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/BattleMechanics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Imports/ImportJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Utility/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Utility/Printer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Utility/TextParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Utility/TextParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

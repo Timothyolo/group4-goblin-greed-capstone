@@ -11,8 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
-import static com.Utility.Printer.print;
-
 public class MyGui {
 
     JFrame frame;
@@ -23,24 +21,30 @@ public class MyGui {
     JLabel gameTitle;
     JButton playButton;
     JButton infoButton;
+
     JPanel topPanel;
     JPanel centerPanel;
     JPanel bottomPanel;
     JLabel bottomTextLabel;
     static JTextField bottomTf;
     static JTextArea mainTextArea;
+    JScrollPane scroll;
+
     static String newline;
+
     StartGameHandler sgHandler = new StartGameHandler();
     InputTextHandler itHandler = new InputTextHandler();
 
-    //Game newGame;
 
     /*public static void main(String[] args) throws IOException, ParseException {
 
         new MyGui();
     }*/
 
-    public MyGui() throws IOException, ParseException {
+    /**
+     * Initial GUI screen with game title, and two buttons - Play and More Info
+     */
+    public MyGui() {
 
         //newGame = new Game();
         frame = new JFrame("Goblin's Greed");
@@ -51,8 +55,10 @@ public class MyGui {
         gameTitle = new JLabel("Goblin's Greed");
         playButton = new JButton("Play");
         infoButton = new JButton("More Info");
+
         newline = "\n";
-        mainTextArea = new JTextArea("This is the main text area. ");
+        mainTextArea = new JTextArea();
+        //scroll = new JScrollPane (mainTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         //StartGameHandler sgHandler = new StartGameHandler();
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -73,13 +79,16 @@ public class MyGui {
 
         frame.add(buttonPanel);
         frame.add(titlePanel);
-
+        //frame.add(scroll);
 
         frame.setVisible(true);
         
 
     }
 
+    /**
+     * Handler for Play button, will display the output JTextArea and JTextField at bottom for command inputs
+     */
     public class StartGameHandler implements ActionListener {
 
 
@@ -103,25 +112,35 @@ public class MyGui {
             //JLabel sample = new JLabel("Goblin's Greed");
             //mainTextArea = new JTextArea("This is the main text area. ");
             //mainTextArea.setBackground(Color.white);
-            //mainTextArea.setLineWrap(true);
-            //mainTextArea.setWrapStyleWord(true);
+            mainTextArea.setLineWrap(true);
+            mainTextArea.setWrapStyleWord(true);
             mainTextArea.setEditable(false);
+            mainTextArea.setBounds(100, 100, 600, 400);
+            scroll = new JScrollPane (mainTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+            scroll.setPreferredSize(new Dimension(600, 400));
+
             bottomTf.addActionListener(itHandler);
 
 
-            centerPanel.add(mainTextArea);
+            //centerPanel.add(mainTextArea);
+            centerPanel.add(scroll);
             bottomPanel.add(bottomTextLabel);
             bottomPanel.add(bottomTf);
 
+            //frame.add(scroll);
             cp.add(BorderLayout.NORTH, topPanel);
             cp.add(BorderLayout.CENTER, centerPanel);
             cp.add(BorderLayout.SOUTH, bottomPanel);
+
 
         }
 
 
     }
 
+    /**
+     * Event handler for JTextField
+     */
     public class InputTextHandler implements ActionListener {
 
         //takes input from JTextField at bottom
@@ -149,6 +168,10 @@ public class MyGui {
         }
     }*/
 
+    /**
+     * Method for outputting to JTextArea in center
+     * @param output
+     */
     public static void outputTextArea(String output) {
         //output to JTextArea in center
         mainTextArea.append(output + newline);

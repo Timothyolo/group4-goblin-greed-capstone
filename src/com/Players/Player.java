@@ -1,5 +1,6 @@
 package com.Players;
 
+import WorkingFiles.MyGui;
 import com.Items.Armor;
 import com.Items.Item;
 import com.Items.Weapons;
@@ -99,15 +100,23 @@ public class Player {
         int randAtk = getRandomNumber(0,100);
         if (randAtk > 80) {
             System.out.println(getName() + " landed a critical hit!");
+            MyGui.outputTextArea(getName() + " landed a critical hit!");
+
             System.out.println(getName() + " dealt "+ (getAttack() * 2) + " damage!");
+            MyGui.outputTextArea(getName() + " dealt "+ (getAttack() * 2) + " damage!");
+
             enemy.setHp(enemy.getHp()-(getAttack() * 2) );
         }
         else if (randAtk >= 20) {
             System.out.println(getName() + " dealt "+ getAttack() + " damage!");
+            MyGui.outputTextArea(getName() + " dealt "+ getAttack() + " damage!");
+
             enemy.setHp(enemy.getHp() - getAttack());
         }
          else {
             System.out.println(getName() + " missed!");
+            MyGui.outputTextArea(getName() + " missed!");
+
         }
         return enemy;
     }
