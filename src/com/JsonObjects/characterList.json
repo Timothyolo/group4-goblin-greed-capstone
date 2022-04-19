@@ -2,111 +2,133 @@
 	 {
 	 "name": "Goblin",
 	 "hp": 30,
-	 "attack": 5
+	 "attack": 5,
+	 "value": 6
 	 },
 	 {
 	 "name": "Ghost",
 	 "hp": 20,
-	 "attack": 7
+	 "attack": 7,
+	 "value": 5
 	 },
 	 {
 	 "name": "Orc",
 	 "hp": 45,
-	 "attack": 8
+	 "attack": 8,
+	 "value": 9
 	 },
 	 {
 	 "name": "Slime",
 	 "hp": 15,
-	 "attack": 3
+	 "attack": 3,
+	 "value": 3
 	 },
 	 {
 	 "name": "Imp",
 	 "hp": 18,
-	 "attack": 4
+	 "attack": 4,
+	 "value": 4
 	 },
 	 {
-		"name": "Rat",
-		"hp": 7,
-		"attack": 2
+	"name": "Rat",
+	"hp": 7,
+	"attack": 2,
+	 "value": 2
 	 },
 	 {
-		"name": "Gnome",
-		"hp": 11,
-		"attack": 2
+	"name": "Gnome",
+	"hp": 11,
+	"attack": 2,
+	 "value": 3
 	 },
 	 {
 		"name": "Kobold",
 		"hp": 14,
-		"attack": 3
+		"attack": 3,
+		 "value": 5
 	 },
 	 {
 	 	"name": "Zombie",
 	 	"hp": 40,
-	 	"attack": 3
+	 	"attack": 3,
+		 "value": 7
 	 },
 	 {
 	 	"name": "Ratkin",
 	 	"hp": 25,
-	 	"attack": 4
+	 	"attack": 4,
+		 "value": 5
 	 },
 	 {
 	 	"name": "Aberration",
 	 	"hp": 24,
-	 	"attack": 2
+	 	"attack": 2,
+		 "value": 5
 	 },
 	 {
 	 	"name": "Starved-wolf",
 	 	"hp": 20,
-	 	"attack": 4
+	 	"attack": 4,
+		 "value": 4
 	 },
 	 {
 	 	"name": "Skeleton",
 	 	"hp": 26,
-	 	"attack": 3
+	 	"attack": 3,
+		 "value": 5
 	 },
 	 {
 	 	"name": "Bandit",
 	 	"hp": 45,
-	 	"attack": 5
+	 	"attack": 5,
+		 "value": 8
 	 },
 	 {
 	 	"name": "Troglodyte",
 	 	"hp": 21,
-	 	"attack": 3
+	 	"attack": 3,
+		 "value": 5
 	 },
 	 {
 	 	"name": "Fire-elemental",
 	 	"hp": 24,
-	 	"attack": 6
+	 	"attack": 6,
+		 "value": 5
 	 },
 	 {
 	 	"name": "Earth-elemental",
 	 	"hp": 52,
-	 	"attack": 3
+	 	"attack": 3,
+		 "value": 10
 	 },
 	 {
 	 	"name": "Water-elemental",
 	 	"hp": 33,
-	 	"attack": 4
+	 	"attack": 4,
+		 "value": 7
 	 },
 	 {
 	 	"name": "Sword-master",
 	 	"hp": 44,
-	 	"attack": 7
+	 	"attack": 7,
+		 "value": 8
 	 },
 	 {
 	 	"name": "Gremlin",
 	 	"hp": 13,
-	 	"attack": 2
+	 	"attack": 2,
+		 "value": 2
 	 },
 	 {
 	 	"name": "Giant-Spider",
 	 	"hp": 22,
-	 	"attack": 3
+	 	"attack": 3,
+		 "value": 4
 	 },
 	 {
 	 	"name": "Mimic",
 	 	"hp": 43,
-	 	"attack": 5
+	 	"attack": 5,
+		 "value": 9
 	 }
 ]
