@@ -71,13 +71,13 @@ public class Game {
 
 
             //Player you = new Player("Test", 100, 15);
-        while (true) {
+        //while (true) {
             //System.out.println(continueGame);
 
-            if (continueGame) {
+            //if (continueGame()) {
 
-                System.out.println("Something");
-                String name = text;
+                //String name = text;
+                String name = MyGui.requestInput();
                 Player you = new Player(name, 100, 15);
 
                 //Scanner in2 = new Scanner(System.in);
@@ -99,9 +99,9 @@ public class Game {
 
                 //}
                 //continueGame = false
-            }
+            //}
 
-        }
+        //}
 
         //continueGame = false;
             //return true;
@@ -111,9 +111,10 @@ public class Game {
     //Method for running the game
     public void playGame(Player player1) throws IOException, ParseException, InterruptedException {
         //continueGame = false;
-        //while (true) {
+        System.out.println("Playing game...");
+        while (true) {
             //if (continueGame()) {
-                System.out.println("Playing game...");
+                //System.out.println("Playing game...");
                 player1.setItems(player1.getItems());
                 System.out.println("\n" + player1.getName() + " is at the " + player1.getCurrentRoom().getName());
                 MyGui.outputTextArea(player1.getName() + " is at the " + player1.getCurrentRoom().getName());
@@ -121,13 +122,14 @@ public class Game {
                 System.out.println(player1.getCurrentRoom().getDesc());
                 MyGui.outputTextArea(player1.getCurrentRoom().getDesc());
 
-                Scanner in = new Scanner(System.in);
+                //Scanner in = new Scanner(System.in);
 
                 Printer.print(Story.promptPlayerMessage());
                 MyGui.outputTextArea(Story.promptPlayerMessage());
 
-                String[] location = in.nextLine().split(" ");
+                //String[] location = in.nextLine().split(" ");
                 //String[] location = text.split(" ");
+                String[] location = MyGui.requestInput().split(" ");
                 //while (continueGame) {
                 List<String> validCommand = parser.ParseCommand(location);
 
@@ -137,7 +139,7 @@ public class Game {
                 //continuePlayGame = false;
                 //System.out.println(continueGame);
             //}
-       // }
+       }
 
 
         //}
@@ -190,7 +192,7 @@ public class Game {
         }*/
     }
 
-    public static void storeText(String input) {
+   /*public static void storeText(String input) {
 
         //String[] location = input.split(" ");
         text = input;
@@ -204,15 +206,12 @@ public class Game {
         //System.out.println(continuePlayGame);
         //return continueGame;
         //return text;
-    }
+    }*/
 
-    public boolean continueGame() {
-        /*if (continueGame = true) {
-            continueGame = false;
-        }*/
+    /*public boolean continueGame() {
 
         return continueGame;
-    }
+    }*/
 
     public void commandProcessor(List<String> validCommand, Player player1) throws IOException, InterruptedException, ParseException {
 
@@ -248,8 +247,8 @@ public class Game {
                 //quit engine
                 Printer.print(Story.quitMessage());
                 MyGui.outputTextArea(Story.quitMessage());
-
-                System.exit(130);
+                Thread.sleep(1000);
+                System.exit(0);
             }
             else if (validCommand.get(0).equals("help")) {
                 //help engine

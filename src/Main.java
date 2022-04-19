@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException, ParseException, InterruptedException {
 
-        /*EventQueue.invokeLater(new Runnable() {
+        EventQueue.invokeLater(new Runnable() {
                                    @Override
                                    public void run() {
                                        try {
@@ -22,12 +22,14 @@ public class Main {
                                            e.printStackTrace();
                                        } catch (ParseException e) {
                                            e.printStackTrace();
+                                       } catch (InterruptedException e) {
+                                           e.printStackTrace();
                                        }
                                    }
-                               });*/
-        new MyGui();
-        Game newGame = new Game();
-        newGame.beginGame();
+                               });
+        //new MyGui();
+        //Game newGame = new Game();
+        //newGame.beginGame();
         /*new Thread(new Runnable() {
             @Override
             public void run() {
