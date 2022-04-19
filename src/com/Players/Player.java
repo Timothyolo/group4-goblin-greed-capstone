@@ -1,6 +1,8 @@
 package com.Players;
 
 import WorkingFiles.MyGui;
+import com.GameLogic.BattleMechanics;
+import com.GameLogic.PlayerMechanics;
 import com.Items.Armor;
 import com.Items.Item;
 import com.Items.Weapons;
@@ -15,6 +17,7 @@ public class Player {
     private String name;
     private long hp;
     private long attack;
+    private long value;
     private Collection<Item> items = new ArrayList<>();
     private Room currentRoom;
     private Weapons equippedWeapon = null;
@@ -25,7 +28,18 @@ public class Player {
         setName(name);
         setHp(hp);
         setAttack(attack);
+
     }
+    //overloaded method for enemies
+    public Player(String name, long hp, long attack, long value) {
+        setName(name);
+        setHp(hp);
+        setAttack(attack);
+        setValue(value);
+
+    }
+
+
 
     public int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
@@ -47,6 +61,10 @@ public class Player {
     public void setAttack(long attack) {
         this.attack = attack;
     }
+
+    public long getValue(){return value;}
+
+    public void setValue(long value){this.value = value;}
 
     public Room getCurrentRoom() {
         return currentRoom;
@@ -119,6 +137,15 @@ public class Player {
 
         }
         return enemy;
+    }
+    public int calculateScore(){
+
+        // need to grab score from playerMechanic and battleMechanic
+        int itemScore = PlayerMechanics.calculateScore();
+        int monsterScore = BattleMechanics.calculateScore();
+        int score = itemScore + monsterScore;
+        return score;
+
     }
 
 
