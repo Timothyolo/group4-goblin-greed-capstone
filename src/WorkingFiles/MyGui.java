@@ -228,7 +228,7 @@ public class MyGui {
 
         private void btnPlaySoundCLick() throws LineUnavailableException, IOException, UnsupportedAudioFileException{
 
-            File soundFile = new File("src/com/music/group4.wav");
+            File soundFile = new File("src/com/music/Just Breathing (Instrumental) - NEFFEX.wav");
             AudioInputStream sound = AudioSystem.getAudioInputStream(soundFile);
 
             DataLine.Info info = new DataLine.Info(Clip.class, sound.getFormat());
