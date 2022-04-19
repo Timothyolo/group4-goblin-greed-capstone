@@ -7,16 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fe5e684-07eb-4075-a17d-8c76024cd27b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/music/Just Breathing (Instrumental) - NEFFEX.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/images/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/images/goblin.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$SoundHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$SoundHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/JsonObjects/characterList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,8 +46,24 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\timol\TLG\group4-goblin-greed-capstone\src\com\music" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\timol\TLG\group4-goblin-greed-capstone\src\com\images" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Image">
+    <configuration name="Image" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.images.Image" />
+      <module name="group5-goblin-greed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.images.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="group5-goblin-greed" />
@@ -65,6 +86,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Image" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Music" />
       </list>
