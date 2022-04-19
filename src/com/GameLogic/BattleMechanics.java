@@ -23,13 +23,14 @@ public class BattleMechanics {
         System.out.println("You started a battle with: "+enemyFighter.getName());
         MyGui.outputTextArea("You started a battle with: "+enemyFighter.getName());
 
-        Scanner in = new Scanner(System.in);
+        //Scanner in = new Scanner(System.in);
         while(true) {
             System.out.println("Type: 'attack' to deal damage or 'run' to escape from the battle.");
             MyGui.outputTextArea("Type: 'attack' to deal damage or 'run' to escape from the battle.");
 
-            String input = in.nextLine().strip();
-            if(input.equalsIgnoreCase("attack")){
+            //String input = in.nextLine().strip();
+            String input = MyGui.requestInput().strip();
+            if(input.equalsIgnoreCase("attack") || input.equalsIgnoreCase("fight") || input.equalsIgnoreCase("strike")){
                 player.battle(enemyFighter);
                 enemyFighter.battle(player);
 
