@@ -14,6 +14,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class BattleMechanics {
+    private static int score = 0;
 
     public static void fight(String enemy,Player player) throws IOException, ParseException {
 
@@ -47,24 +48,7 @@ public class BattleMechanics {
                 break;
             }
 
-
-//            if ("attack".equalsIgnoreCase(in.nextLine().strip())){
-//                player.battle(enemyFighter);
-//                enemyFighter.battle(player);
-//                System.out.println("Enemy HP is now: "+ enemyFighter.getHp());
-//                if(checkFight(player,enemyFighter) != null) {
-//                    break;
-//                };
-//                //Fix the run button(need to optimize)
-//            }else {
-//                System.out.println("you are running away");
-//                break;
-//
-//            }
         }
-//     possible bug cause 1: not closing scanner?   in.close();
-        //if("run".equalsIgnoreCase(in.nextLine()))
-
 
     }
 
@@ -85,10 +69,16 @@ public class BattleMechanics {
             List<Player> enemies = new ArrayList<>(ImportJSON.getNpcs());
             enemies.remove(enemyToRemove.get(0));
             player.getCurrentRoom().defeatEnemy();
+            score += enemy.getValue();
             return enemies;
 
 
         }
         return null;
+    }
+
+
+    public static int calculateScore()  {
+        return score;
     }
 }

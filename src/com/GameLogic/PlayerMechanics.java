@@ -1,6 +1,7 @@
 package com.GameLogic;
 
 import WorkingFiles.MyGui;
+import com.Imports.ImportJSON;
 import com.Items.Armor;
 import com.Items.Item;
 import com.Items.Weapons;
@@ -17,6 +18,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class PlayerMechanics {
+    private static int score = 0;
+
 
     public static void moveRoom(String location, Game game) throws IOException, ParseException, InterruptedException {
         Player player = game.getPlayer();
@@ -77,10 +80,14 @@ public class PlayerMechanics {
 
 
     public static void getItem(String item, Collection<Item> roomItems, Collection<Item> playerItems) {
+//        Player player = game.getPlayer();
+
         List<Item> itemToGrab = roomItems.stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
         Item taken = itemToGrab.get(0);
         roomItems.remove(taken);
         playerItems.add(taken);
+        score = (int) (score + taken.getValue());
+
 
         System.out.println("You picked up the " + taken.getName() + "!");
         MyGui.outputTextArea("You picked up the " + taken.getName() + "!");
@@ -120,16 +127,22 @@ public class PlayerMechanics {
 
         }
     }
+    public static int calculateScore() {
+        return score;
+    }
+
     public static void stats(Player player) {
         System.out.println("Name: "+player.getName());
         System.out.println("HP: "+player.getHp());
         System.out.println("Attack Power: "+ player.getAttack());
         System.out.println("Inventory: ");
+        System.out.println("Score: "+ player.calculateScore());
 
         MyGui.outputTextArea("Name: "+player.getName());
         MyGui.outputTextArea("HP: "+player.getHp());
         MyGui.outputTextArea("Attack Power: "+ player.getAttack());
         MyGui.outputTextArea("Inventory: ");
+        MyGui.outputTextArea("Score: "+player.calculateScore());
 
         for (Item item: player.getItems()) {
             System.out.println(item.getName());

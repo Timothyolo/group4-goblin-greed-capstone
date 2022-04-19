@@ -30,7 +30,8 @@ public class ImportJSON {
         for (Object obItems: inventory) {
             JSONObject inventoryItem = (JSONObject) obItems;
             Item questItem;
-            questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"));
+            questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"),
+                    (Long) inventoryItem.get("value"));
             items.add(questItem);
         }
         return items;
@@ -46,7 +47,8 @@ public class ImportJSON {
         charjson.addAll(ch);
         for (Object cha: charjson) {
             JSONObject character = (JSONObject) cha;
-            Player npc = new Player((String) character.get("name"), (Long) character.get("hp"), (Long) character.get("attack"));
+            Player npc = new Player((String) character.get("name"), (Long) character.get("hp"), (Long) character.get("attack"),
+                    (Long) character.get("value") );
             npcs.add(npc);
         }
         return npcs;
@@ -79,7 +81,8 @@ public class ImportJSON {
                 inventory) {
             JSONObject inventoryItem = (JSONObject) obItems;
             Item questItem;
-            questItem = new Weapons((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"), (Long) inventoryItem.get("attack"));
+            questItem = new Weapons((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"),
+                    (Long) inventoryItem.get("value"), (Long) inventoryItem.get("attack"));
             weapons.add(questItem);
         }
         return weapons;
