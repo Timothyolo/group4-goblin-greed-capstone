@@ -11,6 +11,7 @@ import java.util.Collection;
 
 
 public class Player {
+
     private String name;
     private long hp;
     private long attack;
@@ -18,7 +19,6 @@ public class Player {
     private Room currentRoom;
     private Weapons equippedWeapon = null;
     private Armor equippedArmor = null;
-
 
 
     public Player(String name, long hp, long attack) {

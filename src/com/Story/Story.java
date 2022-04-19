@@ -5,22 +5,25 @@ import com.Art.ASCII_Art;
 public class Story {
 
     public static String beginGameText(){
-        return ASCII_Art.title_screen_image() + "\nWelcome to Goblin's Greed great warrior! What is your name: ";
+        return "\nWELCOME TO GOBLIN's GREED, GREAT WARRIOR! PLEASE TELL US YOUR NAME: ";
     }
 
 
 
     public static String tutorial(){
-        return "Tutorial: Type 'GO [room name]' to go to the rooms in the game.\n" +
+        return "Tutorial: The standard command verbs are 'GO', 'GET', 'LOOK', 'ATTACK', 'EQUIP', \n" +
+                "'DROP', 'HELP', and 'QUIT'. You can also try different synonyms such as \n" +
+                "'VIEW', 'GRAB', 'MOVE' or 'FIGHT'.\n" +
+                "Type 'GO [room name]' to go to the rooms in the game.\n" +
                 "Type 'LOOK MAP' to look at your map and get a list of available rooms.\n" +
                 "When in a room you can type 'LOOK AROUND' to see the items in the room.\n" +
                 "Then you may type 'GET [item name]' to add that item to your inventory.\n" +
-                "As the player you can also type 'CHECK INVENTORY' to see what you have.\n" +
+                "As the player you can also type 'LOOK INVENTORY' to see what you have.\n" +
                 "Remove items from your inventory by typing 'DROP [item name]'.\n"+
                 "Equip weapon or armor from your inventory by typing 'EQUIP [item name]'.\n"+
                 "Type 'LOOK STATS' to see your current status.\n"+
                 "If you see an enemy in the room type 'ATTACK' to start a battle.\n"+
-                "Quit the game at anytime by typing 'QUIT'.";
+                "Quit the game at anytime by typing 'QUIT'.\n";
     }
 
 

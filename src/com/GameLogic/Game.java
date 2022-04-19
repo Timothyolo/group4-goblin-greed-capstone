@@ -16,15 +16,21 @@ import java.util.*;
 public class Game {
     private Player player;
     private TextParser parser;
-    private MyGui gui;
+
+    //private MyGui gui;
+
+    private static String text;
+    private static boolean continueGame;
 
     ArrayList<Room> map = (ArrayList<Room>) ImportJSON.getMap();
 
-
     // Constructor for an instance of the game
     public Game() throws IOException, ParseException {
-        gui = new MyGui();
+        //gui = new MyGui();
         parser = new TextParser();
+        text = "";
+        continueGame = false;
+        //continuePlayGame = false;
     }
 
     public Player getPlayer() {
@@ -34,8 +40,6 @@ public class Game {
     public void setPlayer(Player player) {
         this.player = player;
     }
-
-
 
 
     // Method for creating a game
@@ -61,47 +65,84 @@ public class Game {
     }*/
 
     //gui version
-    public boolean beginGame() throws IOException, InterruptedException {
+    public void beginGame() throws IOException, InterruptedException, ParseException {
         Printer.print(Story.beginGameText());
+        MyGui.outputTextArea(Story.beginGameText());
 
-        //String name = MyGui.InputTextHandler;
-        Player you = new Player("Test",100,15);
 
-        //Scanner in2 = new Scanner(System.in);
-        //System.out.println("Ok, " + you.getName() + " this isn't going to be an easy adventure are you ready? (yes/no)");
-        //String startGame = in2.nextLine();
-        //if ("start".equalsIgnoreCase(startGame) || "yes".equalsIgnoreCase(startGame) || "y".equalsIgnoreCase(startGame)) {
-            setPlayer(you);
-            Player player = getPlayer();
-            player.setCurrentRoom(map.get(0));
-            System.out.println(getPlayer());
-            gui.outputTextArea(player.toString());
-            return true;
+            //Player you = new Player("Test", 100, 15);
+        //while (true) {
+            //System.out.println(continueGame);
+
+            //if (continueGame()) {
+
+                //String name = text;
+                String name = MyGui.requestInput();
+                Player you = new Player(name, 100, 15);
+
+                //Scanner in2 = new Scanner(System.in);
+                //System.out.println("Ok, " + you.getName() + " this isn't going to be an easy adventure are you ready? (yes/no)");
+                //String startGame = in2.nextLine();
+                //if ("start".equalsIgnoreCase(startGame) || "yes".equalsIgnoreCase(startGame) || "y".equalsIgnoreCase(startGame)) {
+                setPlayer(you);
+                Player player = getPlayer();
+                player.setCurrentRoom(map.get(0));
+                System.out.println(getPlayer());
+                MyGui.outputTextArea(player.toString());
+
+                //continueGame = true;
+                //continuePlayGame = true;
+                //while (continueGame) {
+                playGame(player);
+                //return true;
+
+
+                //}
+                //continueGame = false
+            //}
+
         //}
-        //else {
-        //    return false;
-        //}
 
+        //continueGame = false;
+            //return true;
     }
 
+
     //Method for running the game
-
     public void playGame(Player player1) throws IOException, ParseException, InterruptedException {
-        player1.setItems(player1.getItems());
-        System.out.println("\n" + player1.getName() + " is at the " + player1.getCurrentRoom().getName());
-        gui.outputTextArea(player1.getName() + " is at the " + player1.getCurrentRoom().getName());
+        //continueGame = false;
+        System.out.println("Playing game...");
+        while (true) {
+            //if (continueGame()) {
+                //System.out.println("Playing game...");
+                player1.setItems(player1.getItems());
+                System.out.println("\n" + player1.getName() + " is at the " + player1.getCurrentRoom().getName());
+                MyGui.outputTextArea(player1.getName() + " is at the " + player1.getCurrentRoom().getName());
 
-        System.out.println(player1.getCurrentRoom().getDesc());
-        gui.outputTextArea(player1.getCurrentRoom().getDesc());
+                System.out.println(player1.getCurrentRoom().getDesc());
+                MyGui.outputTextArea(player1.getCurrentRoom().getDesc());
 
-        Scanner in = new Scanner(System.in);
+                //Scanner in = new Scanner(System.in);
 
-        Printer.print(Story.promptPlayerMessage());
-        gui.outputTextArea(Story.promptPlayerMessage());
+                Printer.print(Story.promptPlayerMessage());
+                MyGui.outputTextArea(Story.promptPlayerMessage());
 
-        String[] location = in.nextLine().split(" ");
-        List<String> validCommand = parser.ParseCommand(location);
-        commandProcessor(validCommand, player1);
+                //String[] location = in.nextLine().split(" ");
+                //String[] location = text.split(" ");
+                String[] location = MyGui.requestInput().split(" ");
+                //while (continueGame) {
+                List<String> validCommand = parser.ParseCommand(location);
+
+                //    Arrays.fill( location, null );
+                commandProcessor(validCommand, player1);
+                //continueGame = false;
+                //continuePlayGame = false;
+                //System.out.println(continueGame);
+            //}
+       }
+
+
+        //}
         //send String[] location to TextParser to validate command
         //ImportJSON will parse CommandList - store in ArrayList verbList
         //TextParser check if location[0] is contained in verbList, then process the noun based on the verb
@@ -151,6 +192,27 @@ public class Game {
         }*/
     }
 
+   /*public static void storeText(String input) {
+
+        //String[] location = input.split(" ");
+        text = input;
+        System.out.println(text);
+        continueGame = true;
+
+        //continueGame();
+        //continuePlayGame = true;
+        System.out.println(continueGame);
+
+        //System.out.println(continuePlayGame);
+        //return continueGame;
+        //return text;
+    }*/
+
+    /*public boolean continueGame() {
+
+        return continueGame;
+    }*/
+
     public void commandProcessor(List<String> validCommand, Player player1) throws IOException, InterruptedException, ParseException {
 
         try {
@@ -185,8 +247,8 @@ public class Game {
                 //quit engine
                 Printer.print(Story.quitMessage());
                 MyGui.outputTextArea(Story.quitMessage());
-
-                System.exit(130);
+                Thread.sleep(1000);
+                System.exit(0);
             }
             else if (validCommand.get(0).equals("help")) {
                 //help engine

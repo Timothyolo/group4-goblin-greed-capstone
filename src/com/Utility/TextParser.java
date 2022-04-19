@@ -46,6 +46,7 @@ public class TextParser {
             }
             else {
                 Printer.print(Story.invalidEntryMessage1());
+                MyGui.outputTextArea(Story.invalidEntryMessage1());
             }
         }
         else {
@@ -82,7 +83,7 @@ public class TextParser {
             }
             else{
                 Printer.print(Story.invalidEntryMessage2());
-                //MyGui.outputTextArea(Story.invalidEntryMessage2());
+                MyGui.outputTextArea(Story.invalidEntryMessage2());
             }
         }
         return validCommand;
