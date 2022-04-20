@@ -8,12 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9688d054-be2e-4acc-91dc-faa66c2aff86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/group5_goblin_greed_jar/group5-goblin-greed.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/group5_goblin_greed_jar/group5-goblin-greed.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/BattleMechanics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/BattleMechanics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/BattleMechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/BattleMechanics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,7 @@
       <recent name="C:\Users\timol\TLG\group4-goblin-greed-capstone\src\com\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JAR Application.group5-goblin-greed.jar">
     <configuration name="Image" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.images.Image" />
       <module name="group5-goblin-greed" />
@@ -88,8 +84,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="group5-goblin-greed.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/group5_goblin_greed_jar/group5-goblin-greed.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.group5-goblin-greed.jar" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Image" />
         <item itemvalue="Application.Music" />
