@@ -288,6 +288,18 @@ public class Game {
                     PlayerMechanics.equipArmor(getPlayer(),validCommand.get(1));
                 }
             }
+            else if (validCommand.get(0).equals("use")) {
+                if (validCommand.get(1).equals("potion") || validCommand.get(1).equals("bread") || validCommand.get(1).equals("wine")) {
+                    PlayerMechanics.healPlayer(getPlayer(), validCommand.get(1));
+                }
+                else {
+                    MyGui.outputTextArea("You cannot use this item.");
+                }
+            }
+            /*else if (validCommand.get(0).equals("heal")) {
+
+                PlayerMechanics.healPlayer(getPlayer(), "");
+            }*/
         } catch (IndexOutOfBoundsException e) {
             playGame(player1);
         }

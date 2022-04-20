@@ -12,7 +12,7 @@ public class Story {
 
     public static String tutorial(){
         return "Tutorial: The standard command verbs are 'GO', 'GET', 'LOOK', 'ATTACK', 'EQUIP', \n" +
-                "'DROP', 'HELP', and 'QUIT'. You can also try different synonyms such as \n" +
+                "'DROP', 'USE', 'HELP', and 'QUIT'. You can also try different synonyms such as \n" +
                 "'VIEW', 'GRAB', 'MOVE' or 'FIGHT'.\n" +
                 "Type 'GO [room name]' to go to the rooms in the game.\n" +
                 "Type 'LOOK MAP' to look at your map and get a list of available rooms.\n" +

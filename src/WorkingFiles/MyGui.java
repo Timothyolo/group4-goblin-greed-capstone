@@ -148,22 +148,19 @@ public class MyGui {
             bottomTf = new JTextField(30);
             audioOnButton = new JButton("Sound");
 
-
-            //JLabel sample = new JLabel("Goblin's Greed");
-            //mainTextArea = new JTextArea("This is the main text area. ");
-            //mainTextArea.setBackground(Color.white);
             mainTextArea.setLineWrap(true);
             mainTextArea.setWrapStyleWord(true);
             mainTextArea.setEditable(false);
             mainTextArea.setBounds(100, 100, 600, 400);
             scroll = new JScrollPane (mainTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
             scroll.setPreferredSize(new Dimension(600, 400));
-            //scrollToBottom(scroll);
+
             scroll.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {
                 public void adjustmentValueChanged(AdjustmentEvent e) {
                     e.getAdjustable().setValue(e.getAdjustable().getMaximum());
                 }
             });
+
 
             bottomTf.addActionListener(itHandler);
             audioOnButton.addActionListener(soundHandler);
@@ -281,30 +278,20 @@ public class MyGui {
         //takes input from JTextField at bottom
         @Override
         public void actionPerformed(ActionEvent e) {
-            /*String text = mainTextArea.getText();
-            mainTextArea.append(text + newline);
-            mainTextArea.selectAll();*/
+
             outputTextArea(bottomTf.getText());
             textReceived = true;
             synchronized (bottomTf) {
                 // notify game loop thread which is waiting on this event
                 bottomTf.notifyAll();
             }
-
-
-            //String str = bottomTf.getText();
-
-            //Game.storeText(str);
-
-            //bottomTf.setText("");
-
-            //bottomTf.requestFocusInWindow();
-            //}
-            //revalidate();
-            //repaint();
         }
     }
 
+    /**
+     * Method that is synchronized with JTextField input
+     * @return
+     */
     public static String requestInput() {
         //bottomTf.setEnabled(true);
         bottomTf.requestFocusInWindow();
@@ -332,20 +319,9 @@ public class MyGui {
      */
     public static void outputTextArea(String output) {
         mainTextArea.append(output + "\n");
-        //mainTextArea.setText(output);
+
     }
 
-    private void scrollToBottom(JScrollPane scroll) {
-        JScrollBar verticalBar = scroll.getVerticalScrollBar();
-        AdjustmentListener downScroller = new AdjustmentListener() {
-            @Override
-            public void adjustmentValueChanged(AdjustmentEvent e) {
-                Adjustable adjustable = e.getAdjustable();
-                adjustable.setValue(adjustable.getMaximum());
-                verticalBar.removeAdjustmentListener(this);
-            }
-        };
-        verticalBar.addAdjustmentListener(downScroller);
-    }
+
 
 }

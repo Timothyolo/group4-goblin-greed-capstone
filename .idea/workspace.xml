@@ -6,10 +6,22 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fe5e684-07eb-4075-a17d-8c76024cd27b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/images/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/images/goblin.jpg" afterDir="false" />
+    <list default="true" id="9688d054-be2e-4acc-91dc-faa66c2aff86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$InputTextHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$InputTextHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$SoundHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$SoundHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$StartGameHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui$StartGameHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/WorkingFiles/MyGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/BattleMechanics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/BattleMechanics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/GameLogic/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/group5-goblin-greed/com/Imports/ImportJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkingFiles/MyGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GameLogic/PlayerMechanics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/CommandList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/CommandList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/JsonObjects/items.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/JsonObjects/items.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Story/Story.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Story/Story.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +62,7 @@
       <recent name="C:\Users\timol\TLG\group4-goblin-greed-capstone\src\com\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Image">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Image" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.images.Image" />
       <module name="group5-goblin-greed" />
@@ -86,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Image" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Image" />
         <item itemvalue="Application.Music" />
       </list>
     </recent_temporary>
