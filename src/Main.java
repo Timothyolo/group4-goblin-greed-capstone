@@ -16,8 +16,7 @@ public class Main {
                                    public void run() {
                                        try {
                                            new MyGui();
-                                           //Game newGame = new Game();
-                                           //newGame.beginGame();
+
                                        } catch (IOException e) {
                                            e.printStackTrace();
                                        } catch (ParseException e) {
@@ -27,41 +26,7 @@ public class Main {
                                        }
                                    }
                                });
-        //new MyGui();
-        //Game newGame = new Game();
-        //newGame.beginGame();
-        /*new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Game newGame = new Game();
-                    newGame.beginGame();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();*/
 
-
-        //Game newGame = new Game();
-
-
-        /*boolean startGame = newGame.beginGame();
-
-        while (true) {
-
-            if (startGame) {
-                newGame.playGame(newGame.getPlayer());
-            }
-            else {
-                break;
-            }
-
-        }*/
     }
 
 }
