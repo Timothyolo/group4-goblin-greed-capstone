@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class BattleMechanics {
     private static int score = 0;
 
-    public static void fight(String enemy,Player player) throws IOException, ParseException {
+    public static void fight(String enemy,Player player) throws IOException, ParseException, InterruptedException {
 
         List<Player> enemyToFight = ImportJSON.getNpcs().stream().filter(ene -> ene.getName().equalsIgnoreCase(enemy)).collect(Collectors.toList());
         Player enemyFighter = enemyToFight.get(0);
@@ -52,13 +52,16 @@ public class BattleMechanics {
 
     }
 
-    public static List<Player> checkFight(Player player,Player enemy) throws IOException, ParseException {
+    public static List<Player> checkFight(Player player,Player enemy) throws IOException, ParseException, InterruptedException {
         if(player.getHp() <= 0) {
 
             System.out.println("You have died!");
             MyGui.outputTextArea("You have died!");
+            MyGui.outputTextArea("Your final score was: " + player.calculateScore());
+            MyGui.outputTextArea(Story.quitMessage());
+            Thread.sleep(5000);
+            System.exit(0);
 
-            System.exit(130);
         }
         else if(enemy.getHp() <= 0) {
 

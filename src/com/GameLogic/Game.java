@@ -17,8 +17,6 @@ public class Game {
     private Player player;
     private TextParser parser;
 
-    //private MyGui gui;
-
     private static String text;
     private static boolean continueGame;
 
@@ -26,11 +24,11 @@ public class Game {
 
     // Constructor for an instance of the game
     public Game() throws IOException, ParseException {
-        //gui = new MyGui();
+
         parser = new TextParser();
         text = "";
         continueGame = false;
-        //continuePlayGame = false;
+
     }
 
     public Player getPlayer() {
@@ -42,69 +40,25 @@ public class Game {
     }
 
 
-    // Method for creating a game
-    /*public boolean beginGame() throws IOException, InterruptedException {
-        Scanner in = new Scanner(System.in);
-        Printer.print(Story.beginGameText());
-        String name = in.nextLine();
-        Player you = new Player(name,100,15);
-        Scanner in2 = new Scanner(System.in);
-        System.out.println("Ok, " + you.getName() + " this isn't going to be an easy adventure are you ready? (yes/no)");
-        String startGame = in2.nextLine();
-        if ("start".equalsIgnoreCase(startGame) || "yes".equalsIgnoreCase(startGame) || "y".equalsIgnoreCase(startGame)) {
-            setPlayer(you);
-            Player player = getPlayer();
-            player.setCurrentRoom(map.get(0));
-            System.out.println(getPlayer());
-            return true;
-        }
-        else {
-            return false;
-        }
-
-    }*/
-
     //gui version
     public void beginGame() throws IOException, InterruptedException, ParseException {
         Printer.print(Story.beginGameText());
         MyGui.outputTextArea(Story.beginGameText());
 
 
-            //Player you = new Player("Test", 100, 15);
-        //while (true) {
-            //System.out.println(continueGame);
 
-            //if (continueGame()) {
-
-                //String name = text;
                 String name = MyGui.requestInput();
-                Player you = new Player(name, 100, 15);
+                Player you = new Player(name, 50, 15);
 
-                //Scanner in2 = new Scanner(System.in);
-                //System.out.println("Ok, " + you.getName() + " this isn't going to be an easy adventure are you ready? (yes/no)");
-                //String startGame = in2.nextLine();
-                //if ("start".equalsIgnoreCase(startGame) || "yes".equalsIgnoreCase(startGame) || "y".equalsIgnoreCase(startGame)) {
                 setPlayer(you);
                 Player player = getPlayer();
                 player.setCurrentRoom(map.get(0));
                 System.out.println(getPlayer());
                 MyGui.outputTextArea(player.toString());
 
-                //continueGame = true;
-                //continuePlayGame = true;
-                //while (continueGame) {
                 playGame(player);
-                //return true;
 
 
-                //}
-                //continueGame = false
-            //}
-
-        //}
-
-        //continueGame = false;
-            //return true;
     }
 
 
@@ -135,83 +89,12 @@ public class Game {
 
                 //    Arrays.fill( location, null );
                 commandProcessor(validCommand, player1);
-                //continueGame = false;
-                //continuePlayGame = false;
-                //System.out.println(continueGame);
-            //}
+
        }
 
-
-        //}
-        //send String[] location to TextParser to validate command
-        //ImportJSON will parse CommandList - store in ArrayList verbList
-        //TextParser check if location[0] is contained in verbList, then process the noun based on the verb
-
-        /*try {
-            if ("quit".equalsIgnoreCase(location[0])) {
-                Printer.print(Story.quitMessage());
-                System.exit(130);
-            } else if ("help".equalsIgnoreCase(location[0]) || "h".equalsIgnoreCase(location[0])) {
-                Printer.print(Story.tutorial());
-
-            } else if ("stats".equalsIgnoreCase(location[0])) {
-                PlayerMechanics.stats(getPlayer());
-            }
-            else if (location.length != 2) {
-                Printer.print(Story.invalidEntryMessage1());
-            } else if ("go".equalsIgnoreCase(location[0])) {
-                PlayerMechanics.moveRoom(location[1], this);
-            }  else if ("attack".equalsIgnoreCase(location[0])) {
-                BattleMechanics.fight(location[1],getPlayer());
-            }else if ("look".equalsIgnoreCase(location[0]) && "around".equalsIgnoreCase(location[1]) || "room".equalsIgnoreCase(location[1])) {
-                PlayerMechanics.lookAround(this);
-            }
-            else if("look".equalsIgnoreCase(location[0]) && "map".equalsIgnoreCase(location[1])){
-                PlayerMechanics.lookAtMap(this);
-            }else if ("look".equalsIgnoreCase(location[0])) {
-                PlayerMechanics.lookItem(location[1], player1.getCurrentRoom().getItems(),player1.getItems());
-            } else if ("get".equalsIgnoreCase(location[0])) {
-                PlayerMechanics.getItem(location[1], player1.getCurrentRoom().getItems(), player1.getItems());
-            } else if ("drop".equalsIgnoreCase(location[0])) {
-                PlayerMechanics.dropItem(location[1], player1.getCurrentRoom().getItems(), player1.getItems());
-            }
-            else if ("equip".equalsIgnoreCase(location[0])) {
-                if(PlayerMechanics.checkInstance(getPlayer(),location[1])) {
-                PlayerMechanics.equipWeapon(getPlayer(),location[1]);
-                } else {
-                    PlayerMechanics.equipArmor(getPlayer(),location[1]);
-                }
-            }else if ("check".equalsIgnoreCase(location[0]) && "inventory".equalsIgnoreCase(location[1])) {
-                PlayerMechanics.checkInventory(getPlayer());
-            } else {
-                Printer.print(Story.invalidEntryMessage2());
-                playGame(player1);
-            }
-        } catch (IndexOutOfBoundsException e) {
-            playGame(player1);
-        }*/
     }
 
-   /*public static void storeText(String input) {
 
-        //String[] location = input.split(" ");
-        text = input;
-        System.out.println(text);
-        continueGame = true;
-
-        //continueGame();
-        //continuePlayGame = true;
-        System.out.println(continueGame);
-
-        //System.out.println(continuePlayGame);
-        //return continueGame;
-        //return text;
-    }*/
-
-    /*public boolean continueGame() {
-
-        return continueGame;
-    }*/
 
     public void commandProcessor(List<String> validCommand, Player player1) throws IOException, InterruptedException, ParseException {
 
