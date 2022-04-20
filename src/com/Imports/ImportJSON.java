@@ -13,9 +13,12 @@ import org.json.simple.parser.ParseException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 public class ImportJSON {
 
+    //parses items json
     public static Collection<Item> getItems() throws IOException, ParseException {
         InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/items.json"));
         Object objItems = new JSONParser().parse(isr);
@@ -24,16 +27,17 @@ public class ImportJSON {
         JSONArray jaItems = (JSONArray) objItems;
         inventory.addAll(jaItems);
 
-        for (Object obItems:
-                inventory) {
+        for (Object obItems: inventory) {
             JSONObject inventoryItem = (JSONObject) obItems;
             Item questItem;
-            questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"));
+            questItem = new Item((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"),
+                    (Long) inventoryItem.get("value"));
             items.add(questItem);
         }
         return items;
     }
 
+    //parses enemies
     public static Collection<Player> getNpcs() throws IOException, ParseException {
         InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/characterList.json"));
         Object charaobj = new JSONParser().parse(isr);
@@ -41,10 +45,10 @@ public class ImportJSON {
         Collection<Player> npcs = new ArrayList<>();
         JSONArray ch = (JSONArray) charaobj;
         charjson.addAll(ch);
-        for (Object cha: charjson
-        ) {
+        for (Object cha: charjson) {
             JSONObject character = (JSONObject) cha;
-            Player npc = new Player((String) character.get("name"), (Long) character.get("hp"), (Long) character.get("attack"));
+            Player npc = new Player((String) character.get("name"), (Long) character.get("hp"), (Long) character.get("attack"),
+                    (Long) character.get("value") );
             npcs.add(npc);
         }
         return npcs;
@@ -77,7 +81,8 @@ public class ImportJSON {
                 inventory) {
             JSONObject inventoryItem = (JSONObject) obItems;
             Item questItem;
-            questItem = new Weapons((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"), (Long) inventoryItem.get("value"), (Long) inventoryItem.get("attack"));
+            questItem = new Weapons((String) inventoryItem.get("name"), (String) inventoryItem.get("desc"),
+                    (Long) inventoryItem.get("value"), (Long) inventoryItem.get("attack"));
             weapons.add(questItem);
         }
         return weapons;
@@ -98,6 +103,20 @@ public class ImportJSON {
             armor.add(questItem);
         }
         return armor;
+    }
+
+    public static Collection<Map> commandParser() throws IOException, ParseException {
+        InputStreamReader isr = new InputStreamReader(getFileFromResourceAsStream("com/JsonObjects/CommandList.json"));
+        Object obj = new JSONParser().parse(isr);
+
+        List<Map> verbList = new ArrayList<>();
+        JSONArray jaCommands = (JSONArray) obj;
+
+        for (Object o : jaCommands) {
+            verbList.add((Map) o);
+        }
+
+        return verbList;
     }
 
     private static InputStream getFileFromResourceAsStream(String fileName) {

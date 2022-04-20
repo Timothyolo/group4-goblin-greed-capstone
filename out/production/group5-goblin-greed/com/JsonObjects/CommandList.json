@@ -1,0 +1,9 @@
+[
+  {"verb": ["go", "get", "look", "quit", "help", "attack", "drop", "equip", "use"]},
+  {"synonyms-go":  ["move", "travel", "walk"]},
+  {"synonyms-get":  ["grab", "take", "pickup"]},
+  {"synonyms-look":  ["see", "view", "examine", "check"]},
+  {"synonyms-attack":  ["fight", "strike"]}
+
+]
+
