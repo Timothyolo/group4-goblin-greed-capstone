@@ -103,22 +103,6 @@ public class MyGui {
         frame.add(buttonPanel);
         frame.add(titlePanel);
 
-        /*new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    //Game newGame = new Game();
-                    newGame.beginGame();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();*/
-
         frame.setVisible(true);
 
 
@@ -247,28 +231,6 @@ public class MyGui {
 
 
     }
-
-    /*private void btnPlaySoundCLick() throws LineUnavailableException, IOException, UnsupportedAudioFileException{
-
-        File soundFile = new File("src/com/music/group4.wav");
-        AudioInputStream sound = AudioSystem.getAudioInputStream(soundFile);
-
-        DataLine.Info info = new DataLine.Info(Clip.class, sound.getFormat());
-        clip = (Clip) AudioSystem.getLine(info);
-        clip.open(sound);
-
-        clip.addLineListener(new LineListener() {
-            public void update(LineEvent event) {
-                if (event.getType() == LineEvent.Type.STOP) {
-                    //System.out.println("stop");
-                    event.getLine().close();
-                }
-            }
-        });
-
-        clip.start();
-
-    }*/
 
     /**
      * Event Listener for JTextField

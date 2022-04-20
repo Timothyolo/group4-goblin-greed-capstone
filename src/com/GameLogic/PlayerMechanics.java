@@ -118,15 +118,15 @@ public class PlayerMechanics {
         } else {
             Item healItem = inventory.get(0);
             if (healItem.getName().equals("potion") || healItem.getName().equals("wine") || healItem.getName().equals("bread")){
-                if (player.getHp() == 100) {
+                if (player.getHp() == 50) {
                     System.out.println("You are already at max HP!");
                     MyGui.outputTextArea("You are already at max HP!");
-                } else if (player.getHp() > 90) {
-                    player.setHp(100);
+                } else if (player.getHp() > 40) {
+                    player.setHp(50);
                     player.removeItem(healItem);
                     MyGui.outputTextArea("You used the " + healItem.getName() + " and restored 10HP. You feel better.");
                     MyGui.outputTextArea("Your HP is now: " + player.getHp());
-                } else if (player.getHp() <= 90) {
+                } else if (player.getHp() <= 40) {
                     player.setHp(player.getHp() + 10);
                     player.removeItem(healItem);
                     MyGui.outputTextArea("You used the " + healItem.getName() + " and restored 10HP. You feel better.");
