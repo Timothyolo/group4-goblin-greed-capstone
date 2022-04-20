@@ -1,61 +1,61 @@
 [{
-		"name": "pile-of-gold",
-		"desc": "Some loose coins hanging around",
+		"name": "gold",
+		"desc": "Some loose coins hanging around.",
 		"value": 4
 	},
 	{
 		"name": "ruby",
-		"desc": "glints red with crimson glow",
+		"desc": "Glints red with crimson glow.",
 		"value": 6
 	},
 	{
 		"name": "topaz",
-		"desc": "a lower quality gem but still worth something",
+		"desc": "A lower quality gem but still worth something.",
 		"value": 4
 	},
 	{
 		"name": "emerald",
-		"desc": "a gem with a captivating green aura",
+		"desc": "A gem with a captivating green aura.",
 		"value": 5
 	},
 	{
 		"name": "diamond",
-		"desc": "a gem appraised higher than most",
+		"desc": "A gem appraised higher than most.",
 		"value": 8
 	},
 	{
 		"name": "sapphire",
-		"desc": "Blue as the deep ocean",
+		"desc": "Blue as the deep ocean.",
 		"value": 5
 	},
 	{
 		"name": "opal",
-		"desc": "a multicolored cut gem, might get you a few coins",
+		"desc": "A multicolored cut gem, might get you a few coins.",
 		"value": 3
 	},
 	{
 		"name": "jet",
-		"desc": "this gem mirrors the pitch black of the corners of this room",
+		"desc": "This gem mirrors the pitch black of the corners of this room.",
 		"value": 3
 	},
 	{
 		"name": "loose-brick",
-		"desc": "Seems like this place isn't well kept",
+		"desc": "Seems like this place isn't well kept.",
 		"value": 1
 	},
 	{
-		"name": "health-potion",
-		"desc": "a potion used by most adventurers when a cleric isn't around",
+		"name": "potion",
+		"desc": "A potion used by most adventurers when a cleric isn't around, restores 10hp.",
 		"value": 2
 	},
 	{
 		"name": "bread",
-		"desc": "A loaf of bread, looks a bit stale",
+		"desc": "A loaf of bread, looks a bit stale, restores 10hp.",
 		"value": 1
 	},
 	{
 		"name": "goblet",
-		"desc": "An old goblet",
+		"desc": "An old goblet.",
 		"value": 1
 	},
 	{
@@ -70,12 +70,12 @@
 	},
 	{
 		"name": "wine",
-		"desc": "An ancient brand of wine that you wonder might still be good.",
+		"desc": "An ancient brand of wine that you wonder might still be good. Restores 10hp.",
 		"value": 1
 	},
 	{
 		"name": "portrait",
-		"desc": "A large painting of someone of prominence",
+		"desc": "A large painting of someone of prominence.",
 		"value": 1
 	},
 	{

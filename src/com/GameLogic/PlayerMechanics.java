@@ -65,15 +65,15 @@ public class PlayerMechanics {
         if(itemsInInventory.size() > 0) {
             Item lookedAt = itemsInInventory.get(0);
 
-            System.out.println("This is a " + lookedAt.getName()+"." + lookedAt.getDesc());
-            MyGui.outputTextArea("This is a " + lookedAt.getName()+"." + lookedAt.getDesc());
+            System.out.println("This is a " + lookedAt.getName()+". " + lookedAt.getDesc());
+            MyGui.outputTextArea("This is a " + lookedAt.getName()+". " + lookedAt.getDesc());
 
         }
         List<Item> itemToLookAt = roomItems.stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
         Item lookedAt = itemToLookAt.get(0);
 
-        System.out.println("This is a " + lookedAt.getName()+"." + lookedAt.getDesc());
-        MyGui.outputTextArea("This is a " + lookedAt.getName()+"." + lookedAt.getDesc());
+        System.out.println("This is a " + lookedAt.getName()+". " + lookedAt.getDesc());
+        MyGui.outputTextArea("This is a " + lookedAt.getName()+". " + lookedAt.getDesc());
     }
 
 
@@ -101,6 +101,41 @@ public class PlayerMechanics {
 
         System.out.println("You dropped the " + taken.getName() + "!");
         MyGui.outputTextArea("You dropped the " + taken.getName() + "!");
+    }
+
+    public static void healPlayer(Player player, String item){
+        //potion, bread, wine - 10hp
+        //check if player has above items, then add 10hp if player health is 90 or less hp
+        List<Item> inventory = (List<Item>) player.getItems().stream().filter(ite -> ite.getName().equalsIgnoreCase(item)).collect(Collectors.toList());
+
+        //player.getItems().remove(healItem);
+        //player.removeItem(healItem);
+
+        if (inventory.size() == 0) {
+            System.out.println("You do not have " + item + " in your inventory.");
+            MyGui.outputTextArea("You do not have " + item + " in your inventory.");
+
+        } else {
+            Item healItem = inventory.get(0);
+            if (healItem.getName().equals("potion") || healItem.getName().equals("wine") || healItem.getName().equals("bread")){
+                if (player.getHp() == 100) {
+                    System.out.println("You are already at max HP!");
+                    MyGui.outputTextArea("You are already at max HP!");
+                } else if (player.getHp() > 90) {
+                    player.setHp(100);
+                    player.removeItem(healItem);
+                    MyGui.outputTextArea("You used the " + healItem.getName() + " and restored 10HP. You feel better.");
+                    MyGui.outputTextArea("Your HP is now: " + player.getHp());
+                } else if (player.getHp() <= 90) {
+                    player.setHp(player.getHp() + 10);
+                    player.removeItem(healItem);
+                    MyGui.outputTextArea("You used the " + healItem.getName() + " and restored 10HP. You feel better.");
+                    MyGui.outputTextArea("Your HP is now: " + player.getHp());
+                }
+            }
+        }
+
+
     }
 
     public static void checkInventory(Player player1) throws IOException, ParseException, InterruptedException {
